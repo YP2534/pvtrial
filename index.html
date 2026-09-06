@@ -3,159 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pro Visuals | Elevate Your Perspective - All Over India</title>
-<link rel="icon" type="image/png" href="ProVisualsLogo.png">
-<link rel="apple-touch-icon" href="ProVisualsLogo.png">
+<title>Nova — Modern SaaS for Growing Teams | Professional Website</title>
+<meta name="description" content="Nova is a premium SaaS platform for teams to manage projects, analytics & growth. Modern, secure, trusted by 10,000+ companies.">
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<script>tailwind.config={theme:{extend:{colors:{ink:'#111111',paper:'#FFFEFB',sand:'#F5F1EB',orange:'#FF4D12',charcoal:'#0F1115',beige:'#F5F2ED',gold:'#D4AF37',line:'#EBE7E1'},fontFamily:{syne:['Syne','sans-serif'],sans:['Plus Jakarta Sans','sans-serif']}}}}</script>
 <style>
-*{scroll-behavior:smooth}
-body{background:#FFFEFB;color:#111;font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden}
-.hero-title{font-family:'Syne',sans-serif;font-weight:800;line-height:.88;letter-spacing:-.03em}
-.orange-3d{color:#FF4D12;text-shadow:3px 3px 0px #111, 8px 8px 30px rgba(255,77,18,.25)}
-.service-dark{background:linear-gradient(135deg,#0F1115 0%, #1C1E24 100%)}
-.check{width:13px;height:13px;border-radius:50%;border:1.3px solid #FF4D12;display:inline-flex;align-items:center;justify-content:center;font-size:6px;color:#FF4D12;flex-shrink:0}
-.tilt-card{transform-style:preserve-3d;transition:all 0.4s cubic-bezier(.23,1,.32,1)}
-.marquee{overflow:hidden;white-space:nowrap;width:100%}
-.marquee-track{display:flex;gap:20px;width:max-content;animation:scroll 40s linear infinite;will-change:transform}
-.marquee-track:hover{animation-play-state:paused}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.input-modern{width:100%;background:#FFFEFB;border:1.5px solid #EBE7E1;border-radius:14px;padding:14px 16px;font-size:13px;outline:none;transition:.2s}
-.input-modern:focus{border-color:#FF4D12;box-shadow:0 0 0 4px rgba(255,77,18,.1)}
-.floating-quote{position:fixed;right:22px;bottom:22px;z-index:999;background:#FF4D12;color:#fff;padding:14px 22px;border-radius:100px;font-size:12px;font-weight:800;letter-spacing:0.15em;box-shadow:0 12px 30px rgba(255,77,18,.4), 0 0 0 6px rgba(255,77,18,.12);display:flex;align-items:center;gap:10px;animation:floatPulse 2.2s infinite}
-@keyframes floatPulse{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
-.floating-quote:hover{background:#111}
+*{box-sizing:border-box}html,body{overflow-x:hidden}
+body{font-family:'Inter',sans-serif;background:#FCFCF9;color:#111}
+.serif{font-family:'Instrument Serif',serif}
+.glass{backdrop-filter:blur(20px);background:rgba(255,255,255,.85)}
 </style>
 </head>
-<body>
+<body class="antialiased">
 
-<a href="#contact-form" class="floating-quote"><i class="fa-solid fa-paper-plane"></i> GET A QUOTE</a>
-
-<nav class="absolute top-0 w-full z-50 px-6 md:px-12 py-4 flex justify-between items-center">
-  <div class="flex items-center gap-3 text-white"><img src="ProVisualsLogo.png" alt="Logo" class="w-11 h-11 rounded-full object-cover border border-white/30 bg-white p-1"><div><p class="font-bold tracking-[0.2em] text-sm leading-none">PRO VISUALS</p><p class="text-[7px] tracking-[0.3em] opacity-70">PUNE • THE SKY IS NOT THE LIMIT</p></div></div>
-  <div class="hidden lg:flex gap-8 text-[11px] tracking-widest text-white/70 font-bold"><a href="#" class="text-white border-b border-orange pb-1">HOME</a><a href="#services">SERVICES</a><a href="#portfolio">PORTFOLIO</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></div>
-  <a href="https://wa.me/917709444575" target="_blank" class="hidden md:block border border-orange text-orange text-[11px] tracking-widest px-6 py-2.5 rounded-full hover:bg-orange hover:text-white transition">BOOK ON WHATSAPP →</a>
-  <button id="mobBtn" class="lg:hidden text-white text-xl"><i class="fa-solid fa-bars"></i></button>
+<!-- NAV -->
+<nav class="sticky top-0 z-50 glass border-b border-black/5">
+  <div class="max-w-[1200px] mx-auto px-4 md:px-8 h-[64px] flex justify-between items-center">
+    <div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-bold text-sm">N</div><span class="font-semibold text-[15px]">Nova</span><span class="text-[10px] ml-2 px-2 py-0.5 bg-black text-white rounded-full tracking-widest">SAAS</span></div>
+    <div class="hidden md:flex items-center gap-8 text-[13px] font-medium opacity-70">
+      <a href="#product">Product</a><a href="#solutions">Solutions</a><a href="#pricing">Pricing</a><a href="#resources">Resources</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="#" class="hidden md:block text-[13px] font-medium">Log in</a>
+      <a href="#" class="bg-black text-white text-[13px] font-medium px-5 py-2.5 rounded-full hover:bg-[#1a1a1a] transition">Start free trial →</a>
+    </div>
+  </div>
 </nav>
 
-<div id="mobMenu" class="fixed inset-0 bg-ink z-[70] hidden flex-col items-center justify-center gap-8 text-white tracking-widest font-bold"><img src="ProVisualsLogo.png" class="w-20 h-20 rounded-full object-cover border border-white/20 bg-white p-1 mb-4"><button id="closeMob" class="absolute top-6 right-6 text-2xl">×</button><a href="#">HOME</a><a href="#services">SERVICES</a><a href="#portfolio">PORTFOLIO</a><a href="#about">ABOUT</a><a href="#contact-form">GET QUOTE</a><a href="https://wa.me/917709444575" class="bg-orange text-white px-8 py-3 rounded-full">BOOK ON WHATSAPP</a></div>
+<!-- HERO -->
+<section class="max-w-[1200px] mx-auto px-4 md:px-8 pt-14 md:pt-24 pb-16">
+  <div class="text-center max-w-[720px] mx-auto">
+    <div class="inline-flex items-center gap-2 border border-black/10 rounded-full px-3 py-1 text-[11px] tracking-widest font-medium mb-6">
+      <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> NEW — ANALYTICS 2.0 IS LIVE
+    </div>
+    <h1 class="serif text-[36px] leading-[0.95] sm:text-[52px] md:text-[72px] tracking-[-0.03em]">
+      The modern platform to <i class="font-normal">scale</i> your business
+    </h1>
+    <p class="text-[14px] md:text-[16px] leading-relaxed opacity-60 mt-6 max-w-[520px] mx-auto">
+      Nova helps 10,000+ growing companies manage projects, track performance, and grow faster. Simple, secure, and built for scale.
+    </p>
+    <div class="flex flex-wrap justify-center gap-3 mt-8">
+      <a href="#" class="bg-black text-white px-7 py-3.5 rounded-full text-[13px] font-medium">Start 14-day free trial</a>
+      <a href="#" class="border border-black/10 bg-white px-7 py-3.5 rounded-full text-[13px] font-medium"><i class="fa-solid fa-play mr-2"></i> Watch demo</a>
+    </div>
+    <p class="text-[11px] opacity-40 mt-4 tracking-widest">NO CREDIT CARD REQUIRED • 2 MIN SETUP</p>
+  </div>
 
-<section class="relative min-h-[85vh] flex items-center bg-ink overflow-hidden">
-  <div class="absolute inset-0"><img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=2000&q=80" class="w-full h-full object-cover opacity-50"><div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/20"></div><div class="absolute top-20 right-20 w-[500px] h-[500px] bg-orange/20 blur-[120px] rounded-full"></div></div>
-  <img src="ProVisualsLogo.png" class="absolute right-[8%] top-[20%] w-[120px] h-[120px] rounded-full object-cover opacity-10 hidden lg:block border border-white/20 bg-white/10 p-1">
-  <div class="relative z-10 w-full px-6 md:px-12 lg:px-20 pt-20"><div class="max-w-[640px]"><p class="text-orange text-[11px] font-bold tracking-[0.4em] mb-4">THE SKY IS NOT THE LIMIT</p><h1 class="hero-title text-white text-[11vw] md:text-[5.6vw]">ELEVATE YOUR<br><span class="orange-3d">PERSPECTIVE</span></h1><p class="text-white/60 text-[13px] mt-6 max-w-[420px] leading-relaxed">We deliver professional drone videography, cinematic photography, and complete event broadcasting. All Over India • 8K RAW.</p><div class="flex flex-wrap gap-4 mt-8"><a href="#services" class="bg-orange text-white text-[11px] font-bold tracking-widest px-8 py-4 rounded-full hover:bg-white hover:text-ink transition">EXPLORE SERVICES →</a><button id="showreelBtn" class="flex items-center gap-3 text-white text-[11px] tracking-widest font-bold"><span class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center"><i class="fa-solid fa-play text-[10px]"></i></span> WATCH SHOWREEL</button></div></div></div>
-</section>
+  <!-- DASHBOARD MOCK -->
+  <div class="mt-12 md:mt-16 bg-white border border-black/10 rounded-[20px] md:rounded-[28px] p-2 md:p-3 shadow-[0_20px_80px_rgba(0,0,0,.12)] overflow-hidden">
+    <div class="bg-[#F6F6F3] border border-black/5 rounded-[14px] md:rounded-[18px] overflow-hidden">
+      <div class="h-[42px] border-b border-black/5 flex items-center px-4 gap-1.5"><div class="w-3 h-3 rounded-full bg-[#FF5F57]"></div><div class="w-3 h-3 rounded-full bg-[#FEBC2E]"></div><div class="w-3 h-3 rounded-full bg-[#28C840]"></div><p class="ml-4 text-[11px] opacity-40 tracking-widest">NOVA DASHBOARD — LIVE</p></div>
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80" class="w-full h-[300px] md:h-[480px] object-cover object-top" alt="SaaS Dashboard">
+    </div>
+  </div>
 
-<section id="services" class="py-20 bg-paper px-6 md:px-10">
-  <div class="flex flex-wrap justify-between items-end mb-12 gap-4"><div><p class="text-orange text-[11px] font-bold tracking-[0.35em]">WHAT WE DO — ALL OVER INDIA</p><h2 class="font-syne font-bold text-[10vw] md:text-[5vw] leading-[0.85] mt-2">OUR<br><span style="-webkit-text-stroke:1px #111;color:transparent">SERVICES</span></h2></div></div>
-  <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[220px]">
-    <div class="tilt-card service-dark rounded-[18px] p-[18px] flex flex-col relative overflow-hidden"><div class="absolute top-0 right-0 w-20 h-20 bg-orange/40 blur-[18px] rounded-full"></div><div class="flex gap-2.5 relative z-10"><div class="w-8 h-8 rounded-[8px] bg-orange/20 border border-orange/30 flex items-center justify-center text-orange text-[13px] shrink-0"><i class="fa-solid fa-camera"></i></div><div class="leading-tight"><p class="text-orange text-[8px] font-bold tracking-widest">PREMIUM PACKAGE</p><h3 class="text-white font-bold text-[12px] tracking-wide mt-0.5">AERIAL SURVEY</h3><p class="text-white/40 text-[8.5px] mt-1">Precision drone mapping.</p></div></div><div class="mt-auto pt-4 space-y-[6px] text-[10px] text-white/65 relative z-10"><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Unlimited Photos</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> 10 Retouched</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> All raw video instantly</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Up to 1 hour</p></div><div class="absolute bottom-0 left-0 w-full h-[2px] bg-orange"></div></div>
-    <div class="tilt-card bg-white border border-line rounded-[18px] p-[18px] flex flex-col relative"><div class="flex gap-2.5"><div class="w-8 h-8 rounded-[8px] bg-sand border border-line flex items-center justify-center text-charcoal text-[13px] shrink-0"><i class="fa-regular fa-building"></i></div><div class="leading-tight"><p class="text-orange text-[8px] font-bold tracking-widest">MOST AFFORDABLE</p><h3 class="text-charcoal font-bold text-[12px] tracking-wide mt-0.5">REAL ESTATE</h3><p class="text-charcoal/50 text-[8.5px] mt-1">Visuals that sell faster.</p></div></div><div class="mt-auto pt-4 space-y-[6px] text-[10px] text-charcoal/70"><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Unlimited Photos</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> 10 Retouched + 1 Video</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> All raw footage</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Duration: 2 hours</p></div><div class="absolute bottom-0 left-0 w-full h-[2px] bg-gold"></div></div>
-    <div class="tilt-card bg-beige border border-line rounded-[18px] p-[18px] flex flex-col relative"><div class="flex gap-2.5"><div class="w-8 h-8 rounded-[8px] bg-white border border-line flex items-center justify-center text-orange text-[13px] shrink-0"><i class="fa-solid fa-heart"></i></div><div class="leading-tight"><p class="text-orange text-[8px] font-bold tracking-widest">HOT SELLING</p><h3 class="text-charcoal font-bold text-[12px] tracking-wide mt-0.5">PRE-WEDDING</h3><p class="text-charcoal/50 text-[8.5px] mt-1">Aerial shots for love story.</p></div></div><div class="mt-auto pt-4 space-y-[6px] text-[10px] text-charcoal/70"><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Unlimited Photos</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> All raw video</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Up to 4 hours</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Cinematic angles</p></div><div class="absolute bottom-0 left-0 w-full h-[2px] bg-orange"></div></div>
-    <div class="tilt-card bg-white border border-line rounded-[18px] p-[18px] flex flex-col relative"><div class="flex gap-2.5"><div class="w-8 h-8 rounded-[8px] bg-beige border border-line flex items-center justify-center text-gold text-[13px] shrink-0"><i class="fa-regular fa-gem"></i></div><div class="leading-tight"><p class="text-charcoal/60 text-[8px] font-bold tracking-widest">GET MOST OF IT</p><h3 class="text-charcoal font-bold text-[12px] tracking-wide mt-0.5">WEDDING SHOOT</h3><p class="text-charcoal/50 text-[8.5px] mt-1">Grandeur from above.</p></div></div><div class="mt-auto pt-4 space-y-[6px] text-[10px] text-charcoal/70"><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Unlimited Photos</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> All raw video</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Up to 4 hours</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Coordination with team</p></div><div class="absolute bottom-0 left-0 w-full h-[2px] bg-gold"></div></div>
-    <div class="tilt-card service-dark rounded-[18px] p-[18px] flex flex-col relative overflow-hidden"><div class="flex gap-2.5 relative z-10"><div class="w-8 h-8 rounded-[8px] bg-orange/20 border border-orange/30 flex items-center justify-center text-orange text-[13px] shrink-0"><i class="fa-solid fa-podcast"></i></div><div class="leading-tight"><p class="text-orange text-[8px] font-bold tracking-widest">FOR CORPORATE EVENTS</p><h3 class="text-white font-bold text-[12px] tracking-wide mt-0.5">LIVE STREAM & PODCAST</h3><p class="text-white/40 text-[8.5px] mt-1">Crystal clear broadcast.</p></div></div><div class="mt-auto pt-4 space-y-[6px] text-[10px] text-white/65 relative z-10"><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Multi-cam Recording</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Raw video + audio</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Live broadcasting</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Up to 8 hours</p></div><div class="absolute bottom-0 left-0 w-full h-[2px] bg-orange"></div></div>
-    <div class="tilt-card bg-white border border-line rounded-[18px] p-[18px] flex flex-col relative"><div class="flex gap-2.5"><div class="w-8 h-8 rounded-[8px] bg-beige border border-line flex items-center justify-center text-orange text-[13px] shrink-0"><i class="fa-solid fa-code"></i></div><div class="leading-tight"><p class="text-orange text-[8px] font-bold tracking-widest">PREMIUM DIGITAL</p><h3 class="text-charcoal font-bold text-[12px] tracking-wide mt-0.5">WEB DEVELOPMENT</h3><p class="text-charcoal/50 text-[8.5px] mt-1">Fast, cinematic, converting.</p></div></div><div class="mt-auto pt-4 space-y-[6px] text-[10px] text-charcoal/70"><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> E-Commerce & Portfolios</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Responsive & SEO</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Domain & Hosting</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Care Plan & Security</p></div><div class="absolute bottom-0 left-0 w-full h-[2px] bg-gold"></div></div>
-    <div class="tilt-card bg-charcoal border border-white/10 rounded-[18px] p-[18px] flex flex-col relative overflow-hidden"><div class="absolute top-0 right-0 w-20 h-20 bg-orange/30 blur-[18px] rounded-full"></div><div class="flex gap-2.5 relative z-10"><div class="w-8 h-8 rounded-[8px] bg-orange/20 border border-orange/30 flex items-center justify-center text-orange text-[13px] shrink-0"><i class="fa-solid fa-mobile-screen-button"></i></div><div class="leading-tight"><p class="text-orange text-[8px] font-bold tracking-widest">NEW LAUNCH</p><h3 class="text-white font-bold text-[12px] tracking-wide mt-0.5">APP DEVELOPMENT</h3><p class="text-white/40 text-[8.5px] mt-1">iOS & Android apps.</p></div></div><div class="mt-auto pt-4 space-y-[6px] text-[10px] text-white/65 relative z-10"><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Flutter / React Native</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Store Deployment</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> UI/UX + Backend + API</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Maintenance Included</p></div><div class="absolute bottom-0 left-0 w-full h-[2px] bg-orange"></div></div>
-    <div class="tilt-card bg-beige border border-line rounded-[18px] p-[18px] flex flex-col relative"><div class="flex gap-2.5"><div class="w-8 h-8 rounded-[8px] bg-orange flex items-center justify-center text-white text-[13px] shrink-0"><i class="fa-solid fa-clapperboard"></i></div><div class="leading-tight"><h3 class="text-charcoal font-bold text-[12px] tracking-wide">VIDEO EDITING</h3><p class="text-charcoal/50 text-[8.5px] mt-1">Raw to captivating stories.</p></div></div><div class="mt-auto pt-4 space-y-[6px] text-[10px] text-charcoal/70"><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Reels & Shorts 9:16</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Podcasts & Corporate 4K</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Cinematic color grading</p><p class="flex items-center gap-2"><span class="check"><i class="fa-solid fa-check"></i></span> Teaser + Full film</p></div><div class="absolute bottom-0 left-0 w-full h-[2px] bg-orange"></div></div>
+  <!-- TRUST -->
+  <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12 mt-10 opacity-40 grayscale">
+    <span class="text-[13px] font-semibold tracking-widest">LINEAR</span><span class="text-[13px] font-semibold tracking-widest">STRIPE</span><span class="text-[13px] font-semibold tracking-widest">NOTION</span><span class="text-[13px] font-semibold tracking-widest">VERCEL</span><span class="text-[13px] font-semibold tracking-widest">FRAMER</span>
   </div>
 </section>
 
-<section id="portfolio" class="bg-[#0E0D0B] py-24 relative overflow-hidden">
-  <div class="text-center mb-12 px-6"><h2 class="font-syne font-extrabold text-[13vw] md:text-[5vw] leading-[0.9] tracking-tight"><span class="text-orange italic">Featured</span> <span class="text-white">Projects</span></h2><p class="text-white/50 text-[12px] tracking-wide mt-4 max-w-[600px] mx-auto">Our best drone, web & app works All Over India.</p></div>
-  <div class="marquee"><div class="marquee-track">
-    <div class="flex gap-5 shrink-0">
-      <div class="w-[310px] shrink-0 rounded-[18px] overflow-hidden border border-white/10 bg-[#1A1917]"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" class="w-full h-[180px] object-cover"><div class="p-4"><p class="text-white font-bold text-[14px]">Luxe Villa - Baner</p><p class="text-white/40 text-[11px] mt-1">Real Estate · Pune</p></div></div>
-      <div class="w-[310px] shrink-0 rounded-[18px] overflow-hidden border border-white/10 bg-[#1A1917]"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" class="w-full h-[180px] object-cover"><div class="p-4"><p class="text-white font-bold text-[14px]">Royal Wedding - Amanora</p><p class="text-white/40 text-[11px] mt-1">Wedding Shoot · Pune</p></div></div>
-      <div class="w-[310px] shrink-0 rounded-[18px] overflow-hidden border border-white/10 bg-[#1A1917]"><img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=600&q=80" class="w-full h-[180px] object-cover"><div class="p-4"><p class="text-white font-bold text-[14px]">Pre-Wedding - Lavasa</p><p class="text-white/40 text-[11px] mt-1">Pre-Wedding · Lavasa</p></div></div>
-      <div class="w-[310px] shrink-0 rounded-[18px] overflow-hidden border border-white/10 bg-[#1A1917]"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" class="w-full h-[180px] object-cover"><div class="p-4"><p class="text-white font-bold text-[14px]">E-Commerce Website</p><p class="text-white/40 text-[11px] mt-1">Web Development · Pune</p></div></div>
-      <div class="w-[310px] shrink-0 rounded-[18px] overflow-hidden border border-white/10 bg-[#1A1917]"><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=600&q=80" class="w-full h-[180px] object-cover"><div class="p-4"><p class="text-white font-bold text-[14px]">Food Delivery App</p><p class="text-white/40 text-[11px] mt-1">App Development · Flutter</p></div></div>
+<!-- FEATURES -->
+<section id="product" class="bg-white border-y border-black/5 py-16 md:py-24">
+  <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+    <div class="grid md:grid-cols-2 gap-10 items-end mb-12">
+      <h2 class="serif text-[32px] md:text-[48px] leading-[0.95] tracking-[-0.02em]">Everything you need,<br>nothing you don't.</h2>
+      <p class="text-[14px] opacity-60 leading-relaxed max-w-[400px] md:ml-auto">Built for modern SaaS teams. Clear structure, smooth workflow, premium experience on every device.</p>
     </div>
-    <div class="flex gap-5 shrink-0">
-      <div class="w-[310px] shrink-0 rounded-[18px] overflow-hidden border border-white/10 bg-[#1A1917]"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" class="w-full h-[180px] object-cover"><div class="p-4"><p class="text-white font-bold text-[14px]">Luxe Villa - Baner</p><p class="text-white/40 text-[11px] mt-1">Real Estate · Pune</p></div></div>
-      <div class="w-[310px] shrink-0 rounded-[18px] overflow-hidden border border-white/10 bg-[#1A1917]"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" class="w-full h-[180px] object-cover"><div class="p-4"><p class="text-white font-bold text-[14px]">Royal Wedding - Amanora</p><p class="text-white/40 text-[11px] mt-1">Wedding Shoot · Pune</p></div></div>
-      <div class="w-[310px] shrink-0 rounded-[18px] overflow-hidden border border-white/10 bg-[#1A1917]"><img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=600&q=80" class="w-full h-[180px] object-cover"><div class="p-4"><p class="text-white font-bold text-[14px]">Pre-Wedding - Lavasa</p><p class="text-white/40 text-[11px] mt-1">Pre-Wedding · Lavasa</p></div></div>
-      <div class="w-[310px] shrink-0 rounded-[18px] overflow-hidden border border-white/10 bg-[#1A1917]"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" class="w-full h-[180px] object-cover"><div class="p-4"><p class="text-white font-bold text-[14px]">E-Commerce Website</p><p class="text-white/40 text-[11px] mt-1">Web Development · Pune</p></div></div>
-      <div class="w-[310px] shrink-0 rounded-[18px] overflow-hidden border border-white/10 bg-[#1A1917]"><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=600&q=80" class="w-full h-[180px] object-cover"><div class="p-4"><p class="text-white font-bold text-[14px]">Food Delivery App</p><p class="text-white/40 text-[11px] mt-1">App Development · Flutter</p></div></div>
-    </div>
-  </div></div>
-</section>
-
-<section id="about" class="py-20 px-6 md:px-10 bg-paper">
-  <div class="grid lg:grid-cols-12 gap-8">
-    <div class="lg:col-span-5"><div class="flex items-center gap-3 mb-4"><img src="ProVisualsLogo.png" class="w-12 h-12 rounded-full object-cover border-2 border-orange/30 bg-white p-0.5"><p class="text-orange text-[11px] font-bold tracking-[0.3em]">BEHIND THE LENS</p></div><h2 class="font-syne font-bold text-[9vw] lg:text-[4.5vw] leading-[0.9] mt-3">VISION.<br>PRECISION.<br><span class="orange-3d">PERFECTION.</span></h2></div>
-    <div class="lg:col-span-7 grid md:grid-cols-2 gap-4">
-      <div class="tilt-card bg-ink text-white rounded-[28px] p-8 h-[240px] flex flex-col justify-between relative overflow-hidden border border-white/10"><div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center relative z-10"><i class="fa-solid fa-bullseye"></i></div><div class="relative z-10"><p class="font-bold">High Quality Results</p><p class="text-[11px] opacity-60">8K RAW • Cinematic</p></div><div class="absolute bottom-0 left-0 w-full h-[2px] bg-orange"></div></div>
-      <div class="tilt-card bg-white border border-line rounded-[28px] p-8 h-[240px] flex flex-col justify-between relative overflow-hidden"><div class="w-12 h-12 rounded-[8px] bg-orange/10 border border-orange/30 flex items-center justify-center text-orange"><i class="fa-solid fa-users"></i></div><div><p class="font-bold text-charcoal">Experienced Team</p><p class="text-[11px] text-charcoal/60">FAA licensed pilots</p></div><div class="absolute bottom-0 left-0 w-full h-[2px] bg-orange"></div></div>
-      <div class="tilt-card bg-white border border-line rounded-[28px] p-8 h-[240px] flex flex-col justify-between relative overflow-hidden"><div class="w-12 h-12 rounded-[8px] bg-beige border border-orange/30 flex items-center justify-center text-orange"><i class="fa-solid fa-camera"></i></div><div><p class="font-bold text-charcoal">Advanced Equipment</p><p class="text-[11px] text-charcoal/60">Inspire 3, FPV, 8K RAW</p></div><div class="absolute bottom-0 left-0 w-full h-[2px] bg-gold"></div></div>
-      <div class="tilt-card bg-orange text-white rounded-[28px] p-8 h-[240px] flex flex-col justify-between relative overflow-hidden border border-orange"><div class="w-12 h-12 rounded-full bg-black flex items-center justify-center"><i class="fa-regular fa-heart"></i></div><div><p class="font-bold">Customer Satisfaction</p><p class="text-[11px] opacity-90">Your vision is our priority</p></div><div class="absolute bottom-0 left-0 w-full h-[2px] bg-black"></div></div>
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="bg-[#FCFCF9] border border-black/5 rounded-[20px] p-6 md:p-8"><div class="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center mb-5"><i class="fa-solid fa-chart-line text-sm"></i></div><h3 class="font-semibold text-[15px]">Advanced Analytics</h3><p class="text-[13px] opacity-60 mt-2 leading-relaxed">Track revenue, churn, and growth with real-time dashboards trusted by top SaaS.</p></div>
+      <div class="bg-[#FCFCF9] border border-black/5 rounded-[20px] p-6 md:p-8"><div class="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center mb-5"><i class="fa-solid fa-shield-halved text-sm"></i></div><h3 class="font-semibold text-[15px]">Enterprise Security</h3><p class="text-[13px] opacity-60 mt-2 leading-relaxed">SOC 2 certified, end-to-end encryption, and role-based access for teams.</p></div>
+      <div class="bg-black text-white rounded-[20px] p-6 md:p-8"><div class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center mb-5"><i class="fa-solid fa-bolt text-sm"></i></div><h3 class="font-semibold text-[15px]">Lightning Fast</h3><p class="text-[13px] opacity-60 mt-2 leading-relaxed">99.99% uptime, global CDN, and smooth experience on mobile & desktop.</p></div>
     </div>
   </div>
 </section>
 
-<section id="contact-form" class="py-24 px-6 md:px-10 bg-[#0E0D0B] relative overflow-hidden">
-  <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-orange/15 blur-[140px] rounded-full"></div>
-  <div class="max-w-[1300px] mx-auto relative z-10 grid lg:grid-cols-12 gap-12 items-start">
-    <div class="lg:col-span-5 text-white"><p class="text-orange text-[11px] font-bold tracking-[0.4em] mb-4">LET'S TALK</p><h2 class="font-syne font-extrabold text-[11vw] md:text-[4.2vw] leading-[0.85]">GET A<br><span class="text-orange italic">QUOTE</span><br>TODAY</h2><p class="text-white/50 text-[14px] leading-relaxed mt-6 max-w-[380px]">Tell us about your project. We reply within 2 hours. Drone • Web • App • Video editing — All Over India.</p>
-      <div class="mt-10 space-y-5"><div class="flex items-center gap-4"><div class="w-11 h-11 rounded-full bg-white/10 border border-white/10 flex items-center justify-center text-orange"><i class="fa-solid fa-phone"></i></div><div><p class="text-[11px] tracking-widest opacity-50">CALL US</p><p class="font-bold text-[14px]">+91 7709 444 575</p></div></div><div class="flex items-center gap-4"><div class="w-11 h-11 rounded-full bg-white/10 border border-white/10 flex items-center justify-center text-orange"><i class="fa-solid fa-envelope"></i></div><div><p class="text-[11px] tracking-widest opacity-50">EMAIL</p><p class="font-bold text-[14px]">provisuals7@gmail.com</p></div></div><div class="flex items-center gap-4"><div class="w-11 h-11 rounded-full bg-white/10 border border-white/10 flex items-center justify-center text-orange"><i class="fa-solid fa-location-dot"></i></div><div><p class="text-[11px] tracking-widest opacity-50">SERVICE AVAILABLE</p><p class="font-bold text-[14px]">All Over India</p></div></div></div>
-    </div>
-    <div class="lg:col-span-7"><div class="bg-[#FFFEFB] rounded-[28px] p-6 md:p-10 shadow-[0_20px_80px_rgba(0,0,0,.4)] relative overflow-hidden border border-white/10"><div class="absolute top-0 left-0 w-full h-[3px] bg-orange"></div><div class="flex justify-between items-center mb-8"><h3 class="font-syne font-bold text-[22px] leading-none">Start Your Project</h3><span class="bg-orange/10 border border-orange/20 text-orange text-[10px] font-bold tracking-widest px-3 py-1.5 rounded-full">FAST REPLY • 2H</span></div>
-        <form id="quoteForm" onsubmit="handleQuote(event)" class="space-y-5">
-          <div class="grid md:grid-cols-2 gap-4"><div><label class="text-[11px] font-bold tracking-widest opacity-60 mb-2 block">FULL NAME *</label><input id="fName" required type="text" placeholder="Your Name" class="input-modern"></div><div><label class="text-[11px] font-bold tracking-widest opacity-60 mb-2 block">PHONE *</label><input id="fPhone" required type="tel" placeholder="+91 7709 444 575" class="input-modern"></div></div>
-          <div class="grid md:grid-cols-2 gap-4"><div><label class="text-[11px] font-bold tracking-widest opacity-60 mb-2 block">EMAIL</label><input id="fEmail" type="email" placeholder="you@email.com" class="input-modern"></div><div><label class="text-[11px] font-bold tracking-widest opacity-60 mb-2 block">SERVICE *</label><select id="fService" required class="input-modern"><option value="">Select Service</option><option>Aerial Survey</option><option>Real Estate Shoot</option><option>Pre-Wedding Shoot</option><option>Wedding Shoot</option><option>Live Stream & Podcast</option><option>Web Development</option><option>App Development</option><option>Video Editing</option></select></div></div>
-          <div><label class="text-[11px] font-bold tracking-widest opacity-60 mb-2 block">PROJECT DETAILS</label><textarea id="fMsg" rows="4" placeholder="Tell us about location, date, duration..." class="input-modern resize-none"></textarea></div>
-          <div class="flex flex-col md:flex-row gap-3 pt-2">
-            <button type="submit" class="flex-1 bg-orange text-white font-bold tracking-[0.15em] text-[12px] py-4 rounded-full hover:bg-black transition flex items-center justify-center gap-2">GET QUOTE →</button>
-            <button type="button" onclick="document.getElementById('quoteForm').reset()" class="px-8 py-4 rounded-full border border-line text-[11px] font-bold tracking-widest hover:bg-beige transition">CLEAR</button>
-          </div>
-          <p id="formStatus" class="text-[11px] font-bold tracking-widest text-green-600 text-center hidden">✓ Quote request received!</p>
-        </form>
-      </div></div>
+<!-- PRICING -->
+<section id="pricing" class="max-w-[1200px] mx-auto px-4 md:px-8 py-16 md:py-24">
+  <div class="text-center mb-12"><h2 class="serif text-[32px] md:text-[48px]">Simple, transparent pricing</h2><p class="text-[13px] opacity-60 mt-3">Start free, scale when you need.</p></div>
+  <div class="grid md:grid-cols-3 gap-4 max-w-[900px] mx-auto">
+    <div class="border border-black/10 rounded-[20px] p-6 md:p-8 bg-white"><p class="text-[11px] tracking-widest font-bold opacity-50">STARTER</p><p class="text-[32px] font-bold mt-3">$29<span class="text-[14px] font-normal opacity-60">/mo</span></p><ul class="mt-6 space-y-2 text-[13px] opacity-70"><li><i class="fa-solid fa-check mr-2"></i> 3 Team members</li><li><i class="fa-solid fa-check mr-2"></i> 10 Projects</li><li><i class="fa-solid fa-check mr-2"></i> Basic analytics</li></ul><a href="#" class="mt-8 block text-center border border-black/10 rounded-full py-3 text-[13px] font-medium">Get started</a></div>
+    <div class="bg-black text-white rounded-[20px] p-6 md:p-8 border border-black shadow-xl scale-[1.02]"><p class="text-[11px] tracking-widest font-bold text-white/50">PRO — MOST POPULAR</p><p class="text-[32px] font-bold mt-3">$79<span class="text-[14px] font-normal opacity-60">/mo</span></p><ul class="mt-6 space-y-2 text-[13px] opacity-70"><li><i class="fa-solid fa-check mr-2 text-green-400"></i> Unlimited members</li><li><i class="fa-solid fa-check mr-2 text-green-400"></i> Unlimited projects</li><li><i class="fa-solid fa-check mr-2 text-green-400"></i> Advanced analytics & API</li></ul><a href="#" class="mt-8 block text-center bg-white text-black rounded-full py-3 text-[13px] font-medium">Start 14-day trial</a></div>
+    <div class="border border-black/10 rounded-[20px] p-6 md:p-8 bg-white"><p class="text-[11px] tracking-widest font-bold opacity-50">ENTERPRISE</p><p class="text-[32px] font-bold mt-3">Custom</p><ul class="mt-6 space-y-2 text-[13px] opacity-70"><li><i class="fa-solid fa-check mr-2"></i> Dedicated success manager</li><li><i class="fa-solid fa-check mr-2"></i> Custom integrations</li><li><i class="fa-solid fa-check mr-2"></i> SLA & compliance</li></ul><a href="#" class="mt-8 block text-center border border-black/10 rounded-full py-3 text-[13px] font-medium">Contact sales</a></div>
   </div>
 </section>
 
-<footer id="contact" class="bg-ink text-white/70 py-12 px-6 md:px-12">
-  <div class="grid md:grid-cols-12 gap-10">
-    <div class="md:col-span-3"><div class="flex items-center gap-3 text-white mb-4"><img src="ProVisualsLogo.png" class="w-12 h-12 rounded-full object-cover border border-white/20 bg-white p-0.5"><div><p class="font-bold tracking-[0.2em] text-sm leading-none">PRO VISUALS</p><p class="text-[7px] tracking-[0.3em] opacity-70">DRONE • WEB • APP • PUNE</p></div></div><p class="text-[11px] leading-relaxed">Capturing moments from new heights. Professional drone & digital services All Over India.</p></div>
-    <div class="md:col-span-2"><p class="text-orange text-[11px] font-bold tracking-widest mb-4">QUICK LINKS</p><ul class="text-[12px] space-y-2.5"><li>Home</li><li>About Us</li><li>Services</li><li>Portfolio</li><li>Contact Us</li></ul></div>
-    <div class="md:col-span-3"><p class="text-orange text-[11px] font-bold tracking-widest mb-4">SERVICES</p><ul class="text-[11px] space-y-2 opacity-80"><li>> Aerial Survey — PREMIUM</li><li>> Real Estate — MOST AFFORDABLE</li><li>> Pre Wedding — HOT SELLING</li><li>> Wedding Shoot — GET MOST OF IT</li><li>> Live Stream & Podcast</li><li>> Web Development</li><li>> App Development — NEW</li><li>> Video Editing</li></ul></div>
-    <div class="md:col-span-4"><p class="text-orange text-[11px] font-bold tracking-widest mb-4">CONTACT US</p><p class="text-[12px] mb-2"><i class="fa-solid fa-phone mr-2 text-orange"></i> +91 7709 444 575</p><p class="text-[12px] mb-2"><i class="fa-solid fa-envelope mr-2 text-orange"></i> provisuals7@gmail.com</p><p class="text-[12px] mb-5"><i class="fa-solid fa-location-dot mr-2 text-orange"></i> All Over India</p><a href="#contact-form" class="border border-orange text-orange text-[11px] tracking-widest px-6 py-3 rounded-full hover:bg-orange hover:text-white transition inline-block">GET A QUOTE →</a></div>
-  </div>
-  <div class="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-    <p class="text-[10px] opacity-40 tracking-widest">© 2026 Pro Visuals. All Rights Reserved.</p>
-    <div class="flex items-center gap-3">
-      <a href="https://wa.me/917709444575" target="_blank" class="w-9 h-9 rounded-full bg-[#25D366] flex items-center justify-center text-white hover:scale-110 transition"><i class="fa-brands fa-whatsapp text-[18px]"></i></a>
-      <a href="https://www.instagram.com/provisuals7/" target="_blank" class="w-9 h-9 rounded-full flex items-center justify-center text-white hover:scale-110 transition" style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);"><i class="fa-brands fa-instagram text-[18px]"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=61590798230067" target="_blank" class="w-9 h-9 rounded-full bg-[#1877F2] flex items-center justify-center text-white hover:scale-110 transition"><i class="fa-brands fa-facebook-f text-[16px]"></i></a>
-      <a href="mailto:provisuals7@gmail.com" class="w-9 h-9 rounded-full bg-[#EA4335] flex items-center justify-center text-white hover:scale-110 transition"><i class="fa-solid fa-envelope text-[14px]"></i></a>
-    </div>
-    <div class="flex items-center gap-2 text-[10px] opacity-40 tracking-widest"><img src="ProVisualsLogo.png" class="w-6 h-6 rounded-full object-cover opacity-60 bg-white p-0.5"><p>MADE WITH ♥ IN INDIA • @PROVISUALS7</p></div>
-  </div>
+<!-- CTA -->
+<section class="bg-black text-white mx-4 md:mx-8 rounded-[24px] md:rounded-[32px] py-16 md:py-20 text-center">
+  <h2 class="serif text-[32px] md:text-[56px] leading-[0.9]">Ready to scale your<br>SaaS business?</h2>
+  <p class="text-[13px] opacity-60 mt-4 max-w-[420px] mx-auto">Join 10,000+ companies growing with Nova. Modern, clean, trustworthy platform.</p>
+  <div class="flex justify-center gap-3 mt-8"><a href="#" class="bg-white text-black px-7 py-3.5 rounded-full text-[13px] font-medium">Start free trial</a><a href="#" class="border border-white/20 px-7 py-3.5 rounded-full text-[13px] font-medium">Talk to founder</a></div>
+</section>
+
+<footer class="max-w-[1200px] mx-auto px-4 md:px-8 py-10 flex flex-col md:flex-row justify-between gap-4 text-[11px] opacity-40 tracking-widest">
+  <p>© 2026 NOVA SAAS • BUILT FOR PREMIUM BRANDS</p><p>PRIVACY • TERMS • CONTACT</p>
 </footer>
 
-<!-- SHOWREEL MODAL -->
-<div id="showreelModal" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/85 backdrop-blur-[6px] p-4 md:p-8">
-  <div class="relative w-full max-w-[900px] aspect-video bg-black rounded-[28px] overflow-hidden shadow-[0_20px_80px_rgba(0,0,0,.8)] border border-white/10">
-    <button onclick="closeShowreel()" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white hover:bg-orange hover:border-orange transition flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
-    <video id="showreelVideo" class="w-full h-full object-cover rounded-[28px]" controls>
-      <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
-    </video>
-  </div>
-</div>
-
-<script>
-const mobBtn=document.getElementById('mobBtn'), mobMenu=document.getElementById('mobMenu'), closeMob=document.getElementById('closeMob');
-if(mobBtn) mobBtn.onclick=()=>{mobMenu.classList.remove('hidden');mobMenu.classList.add('flex')};
-if(closeMob) closeMob.onclick=()=>{mobMenu.classList.add('hidden')};
-function handleQuote(e){e.preventDefault();const data={name:document.getElementById('fName').value,phone:document.getElementById('fPhone').value,email:document.getElementById('fEmail').value,service:document.getElementById('fService').value,message:document.getElementById('fMsg').value};console.log(data);const subject=`New Quote Request - ${data.service} - ${data.name}`;const body=`Name: ${data.name}\nPhone: ${data.phone}\nEmail: ${data.email}\nService: ${data.service}\nDetails: ${data.message}`;window.location.href=`mailto:provisuals7@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;document.getElementById('formStatus').classList.remove('hidden');}
-const showreelModal=document.getElementById('showreelModal'), showreelVideo=document.getElementById('showreelVideo'), showreelBtn=document.getElementById('showreelBtn');
-function openShowreel(){showreelModal.classList.remove('hidden');showreelModal.classList.add('flex');document.body.style.overflow='hidden';if(showreelVideo) showreelVideo.play();}
-function closeShowreel(){showreelModal.classList.add('hidden');showreelModal.classList.remove('flex');document.body.style.overflow='';if(showreelVideo){showreelVideo.pause();showreelVideo.currentTime=0;}}
-if(showreelBtn) showreelBtn.onclick=openShowreel;
-if(showreelModal) showreelModal.onclick=(e)=>{if(e.target===showreelModal) closeShowreel();}
-document.addEventListener('keydown',(e)=>{if(e.key==='Escape') closeShowreel();});
-document.querySelectorAll('.tilt-card').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)/25;const y=(e.clientY-r.top-r.height/2)/25;c.style.transform=`perspective(1200px) rotateY(${x}deg) rotateX(${-y}deg) translateZ(10px)`;});c.addEventListener('mouseleave',()=>c.style.transform='perspective(1200px) rotateY(0) rotateX(0) translateZ(0)');});
-</script>
 </body>
 </html>
