@@ -1,141 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maple Dental Multi-Speciality Clinic | Dr. Aditi & Dr. Dipti Choksi | Dentist in Thaltej, Ahmedabad</title>
-<meta name="description" content="Maple Dental Multi-Speciality Clinic by Dr. Aditi Choksi & Dr. Dipti Choksi - 5.0 (337 reviews) Best Dentist in Thaltej, Ahmedabad. Smile Makeover, Implants, Root Canal, Aligners. Open 24 Hours.">
+<title>MK Mobile Mechanic Birmingham | Live Van Tracking | 07388 916260</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=JetBrains+Mono:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script>tailwind.config={theme:{extend:{colors:{slate:'#0F172A',amber:'#F59E0B',hazard:'#FFB800'},fontFamily:{cond:['Barlow Condensed','sans-serif'],mono:['JetBrains Mono','monospace'],sans:['Inter','sans-serif']}}}}</script>
 <style>
-*{box-sizing:border-box}html,body{overflow-x:hidden}
-body{font-family:'Inter',sans-serif;background:#FFFEFB;color:#1A2B2B}
-.serif{font-family:'Fraunces',serif}
+html.lenis{height:auto}*{box-sizing:border-box}body{overflow-x:hidden;background:#F2F2F0;color:#0F172A;font-family:'Inter',sans-serif}
+.cond{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase}
+.mono{font-family:'JetBrains Mono',monospace}
+.hazard-stripes{background:repeating-linear-gradient( -45deg, #FFB800 0 18px, #0F172A 18px 36px)}
+.blueprint{background-image:linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);background-size:32px 32px}
+.steel{box-shadow:6px 6px 0px 0px #0F172A, inset 0 0 0 2px #0F172A}
+.depth{perspective:1500px;transform-style:preserve-3d}
+.pop3d{transform-style:preserve-3d;transition:transform 0.9s cubic-bezier(.23,1,.32,1)}
+#progress{position:fixed;top:0;left:0;height:3px;background:#FFB800;z-index:9999;transform-origin:left;width:0}
 </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
-<div class="bg-[#1A2B2B] text-white text-[11px] px-4 md:px-8 py-2.5 flex justify-between items-center tracking-wide">
-  <p class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-[#D6C7B8]"></i> First Floor-13, Maple Trade Centre, Surdhara Circle, Thaltej, Ahmedabad - 380052</p>
-  <p class="hidden md:flex items-center gap-4"><span><i class="fa-solid fa-star text-yellow-400"></i> 5.0 (337 Reviews)</span> <span class="opacity-60">|</span> <span>Open 24 Hours</span></p>
+<div id="progress"></div>
+
+<!-- TOP LIVE TRACKER - NEW IDEA -->
+<div class="fixed top-0 w-full z-50 bg-[#0F172A] text-white h-[40px] flex items-center px-4 md:px-8 justify-between border-b-2 border-[#FFB800]">
+  <div class="flex items-center gap-4">
+    <span class="mono text-[10px] tracking-widest flex items-center gap-2"><span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span> VAN 01 • ACTIVE</span>
+    <div class="hidden md:flex items-center gap-2 mono text-[10px] opacity-60"><span>PRETORIA RD B9 5LL</span><span>→</span><span id="liveArea" class="text-[#FFB800]">SMALL HEATH B10 • 12 MIN ETA</span></div>
+  </div>
+  <div class="flex items-center gap-3">
+    <span class="hidden md:inline mono text-[10px] bg-white/10 px-2 py-1 rounded">4.9★ 212+ GOOGLE • FULLY INSURED</span>
+    <a href="tel:07388916260" class="bg-[#FFB800] text-black cond font-black px-4 py-1.5 rounded-[4px] text-[12px] tracking-wider">07388 916260 <i class="fa-solid fa-phone ml-1"></i></a>
+  </div>
 </div>
 
-<!-- NAV -->
-<nav class="sticky top-0 z-50 bg-[#FFFEFB]/95 backdrop-blur border-b border-[#EDE6DD] px-4 md:px-8 h-[72px] flex justify-between items-center">
-  <div class="flex items-center gap-3">
-    <div class="w-9 h-9 rounded-full bg-[#1A2B2B] text-white flex items-center justify-center serif font-semibold">M</div>
-    <div class="leading-[1.1]"><p class="font-semibold text-[14px] tracking-tight">Maple Dental</p><p class="text-[10px] tracking-[0.2em] opacity-60">MULTI-SPECIALITY CLINIC</p></div>
-  </div>
-  <div class="hidden md:flex gap-8 text-[13px] font-medium opacity-80">
-    <a href="#treatments" class="hover:opacity-100">Treatments</a>
-    <a href="#doctors">Doctors</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <a href="tel:9898700084" class="bg-[#1A2B2B] text-white text-[12px] px-5 py-2.5 rounded-full">Call: 98987 00084</a>
+<nav class="fixed top-[40px] w-full z-40 bg-[#F2F2F0]/90 backdrop-blur border-b-2 border-black px-4 md:px-8 h-[62px] flex justify-between items-center">
+  <div class="flex items-center gap-3"><div class="w-10 h-10 bg-black text-[#FFB800] flex items-center justify-center cond font-black text-[18px]">MK</div><p class="cond font-black text-[17px] leading-[0.9]">MK MOBILE MECHANIC<br><span class="mono text-[9px] tracking-[0.2em] opacity-60 font-normal">BIRMINGHAM • MOBILE WORKSHOP • NO RECOVERY NEEDED</span></p></div>
+  <div class="hidden lg:flex items-center gap-3"><span class="border-2 border-black px-3 py-1.5 rounded-[4px] mono text-[10px] font-bold">CASH, CARD & BANK TRANSFER</span><a href="https://wa.me/447388916260" class="bg-black text-white cond font-bold px-5 py-2.5 rounded-[4px] text-[12px]">WHATSAPP QUOTE</a></div>
 </nav>
 
-<!-- HERO -->
-<section class="max-w-[1280px] mx-auto px-4 md:px-8 py-8 md:py-16 grid md:grid-cols-12 gap-8 items-center">
-  <div class="md:col-span-7">
-    <div class="inline-flex items-center gap-2 bg-white border border-[#EDE6DD] rounded-full px-3 py-1.5 text-[11px]"><span class="w-2 h-2 bg-green-600 rounded-full"></span> Women-Owned • LGBTQ+ Friendly • 337 Happy Patients • 5.0 Rated</div>
-    <h1 class="serif text-[34px] sm:text-[42px] md:text-[56px] leading-[0.95] tracking-[-0.02em] mt-5">
-      Healthy teeth.<br>Confident smile.<br><span class="text-[#8A7A6B] font-normal italic">Crafted with care in Thaltej.</span>
-    </h1>
-    <p class="text-[13.5px] md:text-[15px] leading-relaxed opacity-70 mt-5 max-w-[520px]">
-      At Maple Dental Multi-Speciality Clinic, Dr. Aditi Choksi & Dr. Dipti Choksi combine advanced cosmetic dentistry with compassionate care. From smile makeovers to implants, root canals & pediatric dentistry — we focus on comfort, precision & lasting results.
-    </p>
-    <div class="flex flex-wrap gap-3 mt-7">
-      <a href="#contact" class="bg-[#1A2B2B] text-white px-6 py-3.5 rounded-full text-[13px] font-medium">Book Consultation Today</a>
-      <a href="#reviews" class="bg-white border border-[#EDE6DD] px-6 py-3.5 rounded-full text-[13px] font-medium"><i class="fa-solid fa-star text-yellow-500 mr-1"></i> See 337 Reviews</a>
+<div class="h-[102px]"></div>
+
+<!-- HERO - BLUEPRINT -->
+<section class="relative blueprint overflow-hidden">
+  <div class="hazard-stripes h-[12px] w-full"></div>
+  <div class="max-w-[1320px] mx-auto px-4 md:px-10 py-10 md:py-16 grid lg:grid-cols-12 gap-8 items-start depth">
+    <div class="lg:col-span-7">
+      <div class="inline-flex gap-2 flex-wrap"><span class="bg-black text-white mono text-[10px] px-3 py-1 rounded-[4px]">B POSTCODES • 15-35 MINS</span><span class="bg-[#FFB800] border-2 border-black mono text-[10px] px-3 py-1 rounded-[4px] font-bold">NO TOWING FEE • SAVE £80-£150</span></div>
+      <h1 class="cond text-[13vw] md:text-[6.8vw] leading-[0.82] font-black tracking-[-0.03em] mt-6"><span class="inline-block pop3d" id="h1a">CAR WON'T</span><br><span class="inline-block pop3d bg-black text-white px-2" id="h1b">START?</span><br><span class="inline-block pop3d" id="h1c">WE FIX IT</span><br><span class="inline-block pop3d text-[#FFB800]" id="h1d" style="-webkit-text-stroke:2px black">ON YOUR DRIVE.</span></h1>
+      <p class="text-[14px] leading-relaxed opacity-75 max-w-[500px] mt-6">MOT failure repairs, pads & discs, battery/alternator/starter, ECU diagnostics, broken coil springs. Based Pretoria Rd, Bordesley Green B9 5LL. We come to your driveway, workplace or roadside across Birmingham.</p>
+      <div class="flex gap-3 mt-8"><a href="tel:07388916260" class="steel bg-black text-white cond font-black px-8 py-4 rounded-[4px] text-[14px] tracking-wider">CALL VAN NOW — GET ETA</a><a href="#estimator" class="steel bg-white cond font-black px-6 py-4 rounded-[4px] text-[13px]">GET FIXED PRICE →</a></div>
     </div>
-    <div class="grid grid-cols-3 gap-4 mt-10 max-w-[420px] border-t border-[#EDE6DD] pt-6">
-      <div><p class="serif text-[24px] leading-none">15+ Yrs</p><p class="text-[11px] opacity-60 mt-1 leading-tight">Clinical Experience</p></div>
-      <div><p class="serif text-[24px] leading-none">5.0 ★</p><p class="text-[11px] opacity-60 mt-1 leading-tight">Google Rating</p></div>
-      <div><p class="serif text-[24px] leading-none">24 Hrs</p><p class="text-[11px] opacity-60 mt-1 leading-tight">Open For Emergency</p></div>
-    </div>
-  </div>
-  <div class="md:col-span-5">
-    <div class="bg-white border border-[#EDE6DD] rounded-[24px] p-2 shadow-[0_20px_50px_rgba(0,0,0,.06)]">
-      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" class="w-full h-[360px] md:h-[460px] object-cover rounded-[18px]" alt="Maple Dental Clinic">
-      <div class="p-4 flex justify-between items-center">
-        <div><p class="font-medium text-[13px]">Dr. Aditi Choksi & Dr. Dipti Choksi</p><p class="text-[11px] opacity-60">First Floor, Maple Trade Centre, Thaltej</p></div>
-        <div class="text-right"><p class="text-[11px] px-2.5 py-1 bg-[#F5EFE8] rounded-full">Open 24 Hours</p></div>
+
+    <div class="lg:col-span-5 space-y-4 depth">
+      <div id="heroMain" class="pop3d steel bg-white p-3 rounded-[8px] rotate-[-1deg]">
+        <div class="bg-[#0F172A] text-white mono text-[10px] px-3 py-2 flex justify-between rounded-t-[4px]"><span>JOB SHEET #MK-212 • BORDESLEY GREEN HUB</span><span class="text-[#FFB800]">LIVE</span></div>
+        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80" class="w-full h-[340px] object-cover mt-2 border-2 border-black">
+        <div class="grid grid-cols-3 gap-2 mt-3"><div class="border-2 border-black p-2 rounded-[4px]"><p class="cond font-black text-[16px] leading-none">35-60</p><p class="mono text-[9px]">MINS AVG</p></div><div class="border-2 border-black p-2 rounded-[4px] bg-[#FFB800]"><p class="cond font-black text-[16px] leading-none">4.9★</p><p class="mono text-[9px]">212+ REVIEWS</p></div><div class="border-2 border-black p-2 rounded-[4px]"><p class="cond font-black text-[16px] leading-none">SAME DAY</p><p class="mono text-[9px]">MOST JOBS</p></div></div>
+      </div>
+      <div id="heroFloat" class="pop3d steel bg-[#FFB800] border-2 border-black p-4 rounded-[6px] w-[260px] ml-auto rotate-[1.5deg]">
+        <p class="mono text-[10px] font-bold">ROADSIDE BREAKDOWN?</p><p class="cond font-black text-[14px] leading-[0.9] mt-1">STAY SAFE — HAZARDS ON, BEHIND BARRIER. WE PRIORITISE ROADSIDE B POSTCODES.</p>
       </div>
     </div>
   </div>
+  <div class="hazard-stripes h-[12px] w-full"></div>
 </section>
 
-<!-- TREATMENTS -->
-<section id="treatments" class="bg-white border-y border-[#EDE6DD] py-14 md:py-20">
-  <div class="max-w-[1280px] mx-auto px-4 md:px-8">
-    <div class="flex flex-wrap justify-between items-end gap-4 mb-8">
-      <h2 class="serif text-[28px] md:text-[36px] leading-[0.9]">Comprehensive care,<br>under one roof</h2>
-      <p class="text-[13px] opacity-60 max-w-[360px]">Preventive to cosmetic — every treatment is personalized with modern technology and gentle care.</p>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-      <div class="border border-[#EDE6DD] rounded-[16px] p-5"><p class="text-[11px] tracking-widest opacity-50">01</p><h3 class="font-semibold mt-2 text-[14px]">Smile Makeover</h3><p class="text-[12px] opacity-60 mt-2 leading-relaxed">Veneers, whitening, crowns, smile design for confident, natural smile.</p></div>
-      <div class="border border-[#EDE6DD] rounded-[16px] p-5"><p class="text-[11px] tracking-widest opacity-50">02</p><h3 class="font-semibold mt-2 text-[14px]">Dental Implants</h3><p class="text-[12px] opacity-60 mt-2 leading-relaxed">Full mouth implants with high success rate — best experience, knowledgeable doctors.</p></div>
-      <div class="border border-[#EDE6DD] rounded-[16px] p-5"><p class="text-[11px] tracking-widest opacity-50">03</p><h3 class="font-semibold mt-2 text-[14px]">Aligners & Braces</h3><p class="text-[12px] opacity-60 mt-2 leading-relaxed">Invisalign & clear aligners for adults & teens — comfortable & invisible.</p></div>
-      <div class="border border-[#EDE6DD] rounded-[16px] p-5 bg-[#1A2B2B] text-white"><p class="text-[11px] tracking-widest opacity-50">04</p><h3 class="font-semibold mt-2 text-[14px]">Root Canal & Scaling</h3><p class="text-[12px] opacity-60 mt-2 leading-relaxed">Painless root canal, dental scaling & preventive care for healthy teeth.</p></div>
-      <div class="border border-[#EDE6DD] rounded-[16px] p-5"><p class="text-[11px] tracking-widest opacity-50">05</p><h3 class="font-semibold mt-2 text-[14px]">Pediatric Dentistry</h3><p class="text-[12px] opacity-60 mt-2 leading-relaxed">Gentle dental care for kids — trusted by parents, 5-year-old treatments.</p></div>
-      <div class="border border-[#EDE6DD] rounded-[16px] p-5"><p class="text-[11px] tracking-widest opacity-50">06</p><h3 class="font-semibold mt-2 text-[14px]">Wisdom Tooth Removal</h3><p class="text-[12px] opacity-60 mt-2 leading-relaxed">Safe, smooth extraction with advanced pain management.</p></div>
-      <div class="border border-[#EDE6DD] rounded-[16px] p-5"><p class="text-[11px] tracking-widest opacity-50">07</p><h3 class="font-semibold mt-2 text-[14px]">Teeth Whitening</h3><p class="text-[12px] opacity-60 mt-2 leading-relaxed">Bright, long-lasting results with modern whitening systems.</p></div>
-      <div class="border border-[#EDE6DD] rounded-[16px] p-5"><p class="text-[11px] tracking-widest opacity-50">08</p><h3 class="font-semibold mt-2 text-[14px]">Emergency — Open 24H</h3><p class="text-[12px] opacity-60 mt-2 leading-relaxed">24-hour emergency dental support at SAL Hospital Road, Thaltej.</p></div>
-    </div>
+<!-- SERVICES - STEEL PLATES 3D -->
+<section class="py-14 md:py-20 max-w-[1320px] mx-auto px-4 md:px-10 depth">
+  <div class="flex flex-wrap justify-between items-end gap-4"><h2 class="cond text-[32px] md:text-[48px] font-black leading-[0.9]">6 CORE JOBS<br>FIXED AT YOUR DOOR</h2><p class="mono text-[11px] border-2 border-black px-3 py-2 rounded-[4px] bg-white">BASE: PRETORIA RD B9 5LL • GSF / EURO PARTS SAME DAY</p></div>
+  <div class="grid md:grid-cols-3 gap-5 mt-10">
+    <div class="service3d pop3d steel bg-white p-6 rounded-[6px]"><p class="mono text-[10px] opacity-60">01 • DIAGNOSTICS</p><h3 class="cond font-black text-[18px] mt-2">ECU SCAN & FAULT CLEAR</h3><p class="text-[12px] opacity-70 mt-2">Engine light, limp mode, ABS. £45 on driveway — live data shown.</p><span class="mt-4 inline-block bg-black text-white mono text-[10px] px-2 py-1 rounded">FROM £45 • BIRMINGHAM</span></div>
+    <div class="service3d pop3d steel bg-[#0F172A] text-white p-6 rounded-[6px]"><p class="mono text-[10px] text-[#FFB800]">02 • BRAKES</p><h3 class="cond font-black text-[18px] mt-2 text-[#FFB800]">PADS & DISCS — BRAKE DISCS</h3><p class="text-[12px] opacity-80 mt-2">Grinding, squealing, MOT fail. Genuine/Bosch fitted roadside.</p></div>
+    <div class="service3d pop3d steel bg-white p-6 rounded-[6px]"><p class="mono text-[10px] opacity-60">03 • NON-START</p><h3 class="cond font-black text-[18px] mt-2">BATTERY, ALTERNATOR, STARTER</h3><p class="text-[12px] opacity-70 mt-2">Click no crank? Test & fit at your door. No recovery truck.</p></div>
+    <div class="service3d pop3d steel bg-[#FFB800] p-6 rounded-[6px]"><p class="mono text-[10px] font-bold">04 • SUSPENSION</p><h3 class="cond font-black text-[18px] mt-2">BROKEN COIL SPRINGS</h3><p class="text-[12px] font-semibold mt-2">Snapped spring — common MOT fail. Fixed at workplace.</p></div>
+    <div class="service3d pop3d steel bg-white p-6 rounded-[6px]"><p class="mono text-[10px] opacity-60">05 • SERVICING</p><h3 class="cond font-black text-[18px] mt-2">INTERIM & FULL ANNUAL</h3><p class="text-[12px] opacity-70 mt-2">Driveway servicing, service book stamped. Oil, filters.</p></div>
+    <div class="service3d pop3d steel bg-white p-6 rounded-[6px] border-[3px] border-[#FFB800]"><p class="mono text-[10px] font-bold">06 • MOT</p><h3 class="cond font-black text-[18px] mt-2">MOT FAILURE RECTIFICATION</h3><p class="text-[12px] opacity-70 mt-2">Failed? We fix same day & liaison re-test.</p></div>
   </div>
 </section>
 
-<!-- DOCTORS + REVIEWS -->
-<section id="doctors" class="max-w-[1280px] mx-auto px-4 md:px-8 py-14 md:py-20 grid md:grid-cols-2 gap-10">
-  <div>
-    <p class="text-[11px] tracking-[0.3em] opacity-50 font-semibold">MEET THE DOCTORS</p>
-    <h2 class="serif text-[28px] md:text-[36px] leading-[0.9] mt-3">Women-owned clinic with<br>patient-first approach</h2>
-    <div class="mt-8 space-y-4">
-      <div class="flex gap-4 border border-[#EDE6DD] rounded-[14px] p-4"><div class="w-12 h-12 rounded-full bg-[#F5EFE8] flex items-center justify-center font-semibold serif">AC</div><div><p class="font-medium text-[14px]">Dr. Aditi Choksi</p><p class="text-[12px] opacity-60">Cosmetic & Implant Specialist • Smile Makeover Expert</p></div></div>
-      <div class="flex gap-4 border border-[#EDE6DD] rounded-[14px] p-4"><div class="w-12 h-12 rounded-full bg-[#F5EFE8] flex items-center justify-center font-semibold serif">DC</div><div><p class="font-medium text-[14px]">Dr. Dipti Choksi</p><p class="text-[12px] opacity-60">Family & Pediatric Dentistry • Root Canal Specialist</p></div></div>
+<!-- ESTIMATOR + COMPARISON - NEW LAYOUT -->
+<section id="estimator" class="bg-[#0F172A] text-white py-16 border-y-[8px] border-[#FFB800] relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.04]" style="background-image:radial-gradient(white 1px, transparent 1px);background-size:24px 24px"></div>
+  <div class="relative max-w-[1320px] mx-auto px-4 md:px-10 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5"><p class="mono text-[#FFB800] text-[11px]">● LIVE WHATSAPP ESTIMATOR — DIRECT TO MECHANIC</p><h2 class="cond text-[42px] md:text-[56px] font-black leading-[0.85] mt-4">GET FIXED<br>PRICE ON<br>WHATSAPP<br><span class="text-[#FFB800]">IN 60 SECS</span></h2><div class="mt-6 bg-white/5 border border-white/10 p-4 rounded-[6px]"><p class="cond font-bold text-[13px]">WHY THIS WORKS:</p><ul class="mono text-[11px] mt-2 space-y-1 opacity-70"><li>• No towing — we come to you</li><li>• GSF/Euro parts Birmingham same day</li><li>• Watch work live, no hidden labour</li><li>• Cash, Card & Bank Transfer accepted</li></ul></div></div>
+    <div class="lg:col-span-7 bg-[#F2F2F0] text-black rounded-[12px] p-6 md:p-8 steel">
+      <form id="estForm" class="grid md:grid-cols-2 gap-4">
+        <div class="md:col-span-2 grid grid-cols-4 gap-2"><label class="border-2 border-black rounded-[6px] p-3 text-center cursor-pointer has-[:checked]:bg-black has-[:checked]:text-white"><input type="radio" name="vt" value="Hatchback (Fiesta/Corsa)" checked class="hidden"><p class="cond font-black text-[11px]">HATCHBACK</p></label><label class="border-2 border-black rounded-[6px] p-3 text-center cursor-pointer has-[:checked]:bg-black has-[:checked]:text-white"><input type="radio" name="vt" value="SUV (Qashqai/Sportage)" class="hidden"><p class="cond font-black text-[11px]">SUV</p></label><label class="border-2 border-black rounded-[6px] p-3 text-center cursor-pointer has-[:checked]:bg-black has-[:checked]:text-white"><input type="radio" name="vt" value="Van (Transit/Vivaro)" class="hidden"><p class="cond font-black text-[11px]">VAN</p></label><label class="border-2 border-black rounded-[6px] p-3 text-center cursor-pointer has-[:checked]:bg-black has-[:checked]:text-white"><input type="radio" name="vt" value="German BMW/Audi/Merc/VW" class="hidden"><p class="cond font-black text-[10px]">GERMAN</p></label></div>
+        <input id="eReg" required placeholder="Reg + Model e.g. BD11 SMH Focus 1.6" class="border-2 border-black px-4 py-3 rounded-[6px] text-[13px] font-bold outline-none"><input id="ePost" required placeholder="B Postcode e.g. B9 5LL" class="border-2 border-black px-4 py-3 rounded-[6px] text-[13px] font-bold outline-none">
+        <select id="eServ" class="md:col-span-2 border-2 border-black px-4 py-3 rounded-[6px] text-[13px] font-bold"><option>Diagnostic Scan & Fault Code Clearing</option><option>Brake Pads & Discs Replacement</option><option>Battery / Alternator / Starter Motor</option><option>Broken Coil Spring / Suspension</option><option>Interim / Full Annual Servicing</option><option>MOT Failure Rectification</option><option>Roadside Breakdown / Non-Start</option></select>
+        <textarea id="eNote" rows="2" placeholder="Fault — e.g. grinding when braking, EML on, spring snapped visible..." class="md:col-span-2 border-2 border-black px-4 py-3 rounded-[6px] text-[13px]"></textarea>
+        <button class="md:col-span-2 bg-[#25D366] border-2 border-black cond font-black py-4 rounded-[6px] text-[15px] tracking-wider shadow-[4px_4px_0px_0px_#000]">SEND WHATSAPP TO MK — 07388 916260 <i class="fa-brands fa-whatsapp ml-2"></i></button>
+      </form>
     </div>
-  </div>
-  <div id="reviews" class="bg-[#F9F5F0] border border-[#EDE6DD] rounded-[20px] p-6 md:p-8">
-    <div class="flex items-center justify-between"><p class="font-semibold text-[14px]">Google Reviews — 5.0 (337)</p><div class="flex text-yellow-500 text-[12px]"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
-    <div class="mt-6 space-y-5">
-      <div class="bg-white border border-[#EDE6DD] rounded-[12px] p-4"><p class="text-[13px] leading-relaxed">"Got full mouth implants done, best experience knowledgeable doctor. Wonderful experience from Mauritius for my treatment — veneers and Invisalign."</p><p class="text-[11px] opacity-60 mt-3">— Rohit Singh • 7 months ago</p></div>
-      <div class="bg-white border border-[#EDE6DD] rounded-[12px] p-4"><p class="text-[13px] leading-relaxed">"Dr Aditi Choksi attended my mother's dental issues. She explained in detail and provided best solution at reasonable rate. Very happy with care."</p><p class="text-[11px] opacity-60 mt-3">— SHRIJU02 • 6 months ago</p></div>
-      <div class="bg-white border border-[#EDE6DD] rounded-[12px] p-4"><p class="text-[13px] leading-relaxed">"My niece is 5 year old and we got her pediatric dental treatment with Dr Aditi. Doctor is very knowledgeable and whole process was very smooth."</p><p class="text-[11px] opacity-60 mt-3">— Local Guide • Verified</p></div>
-    </div>
-    <a href="https://maps.google.com/?q=Maple+Dental+Thaltej" target="_blank" class="mt-5 block text-center bg-[#1A2B2B] text-white rounded-full py-3 text-[12px]">View All 337 Reviews on Google →</a>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="bg-[#1A2B2B] text-white mx-4 md:mx-8 rounded-[24px] py-12 md:py-16 px-6 md:px-12 grid md:grid-cols-2 gap-10">
-  <div>
-    <h2 class="serif text-[32px] md:text-[44px] leading-[0.9]">Visit us at<br>Thaltej, Ahmedabad</h2>
-    <div class="mt-8 space-y-3 text-[13px] opacity-80 leading-relaxed">
-      <p><i class="fa-solid fa-location-dot mr-2 text-[#D6C7B8]"></i> First Floor-13, Maple Trade Centre, near Surdhara Circle, SAL Hospital Road, Memnagar, Thaltej - 380052</p>
-      <p><i class="fa-solid fa-phone mr-2 text-[#D6C7B8]"></i> 098987 00084 — Open 24 Hours</p>
-      <p><i class="fa-solid fa-map mr-2 text-[#D6C7B8]"></i> 3G4H+RG Ahmedabad, Gujarat • LGBTQ+ Friendly • Women-Owned</p>
-    </div>
-    <div class="flex gap-3 mt-8">
-      <a href="tel:9898700084" class="bg-white text-[#1A2B2B] px-6 py-3 rounded-full text-[13px] font-medium">Call Now</a>
-      <a href="https://maps.google.com/?q=Maple+Dental+Multi+Speciality+Clinic+Thaltej" target="_blank" class="border border-white/20 px-6 py-3 rounded-full text-[13px]">Get Directions</a>
-    </div>
+<!-- COVERAGE + REVIEWS -->
+<section class="max-w-[1320px] mx-auto px-4 md:px-10 py-14 grid lg:grid-cols-12 gap-10">
+  <div class="lg:col-span-7"><h2 class="cond text-[28px] font-black">BIRMINGHAM COVERAGE — LIVE ETA GRID</h2><div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6"><div class="steel bg-[#FFB800] p-3 rounded-[6px]"><p class="cond font-black">BORDESLEY GREEN B9</p><p class="mono text-[10px]">HUB • 15 MINS</p></div><div class="steel bg-white p-3 rounded-[6px]"><p class="cond font-black">SMALL HEATH B10</p><p class="mono text-[10px]">15-20 MINS</p></div><div class="steel bg-white p-3 rounded-[6px]"><p class="cond font-black">SPARKBROOK B11</p><p class="mono text-[10px]">15-20 MINS</p></div><div class="steel bg-white p-3 rounded-[6px]"><p class="cond font-black">DIGBETH B5</p><p class="mono text-[10px]">20 MINS</p></div><div class="steel bg-white p-3 rounded-[6px]"><p class="cond font-black">ASTON B6</p><p class="mono text-[10px]">25 MINS</p></div><div class="steel bg-white p-3 rounded-[6px]"><p class="cond font-black">ERDINGTON B24</p><p class="mono text-[10px]">30 MINS</p></div><div class="steel bg-white p-3 rounded-[6px]"><p class="cond font-black">SOLIHULL B90</p><p class="mono text-[10px]">35 MINS</p></div><div class="steel bg-black text-white p-3 rounded-[6px]"><p class="cond font-black text-[#FFB800]">ALL B POSTCODES</p><p class="mono text-[10px]">CALL FOR ETA</p></div></div>
+    <div class="mt-8 border-2 border-black rounded-[6px] overflow-hidden"><div class="bg-black text-white cond font-black px-4 py-2 text-[12px]">MK MOBILE VS TRADITIONAL GARAGE</div><div class="grid grid-cols-3 mono text-[11px] p-3 border-b border-black/10 bg-[#FFB800]/20"><span>FEATURE</span><span class="font-bold">MK MOBILE</span><span class="opacity-60">GARAGE</span></div><div class="grid grid-cols-3 mono text-[11px] p-3 border-b"><span>Towing</span><span class="font-bold">£0 — WE COME</span><span class="opacity-60">£80-150</span></div><div class="grid grid-cols-3 mono text-[11px] p-3 border-b"><span>Watch Live</span><span class="font-bold">YES ON DRIVE</span><span class="opacity-60">No</span></div><div class="grid grid-cols-3 mono text-[11px] p-3"><span>Same Day</span><span class="font-bold">35-60 MIN</span><span class="opacity-60">3-5 days</span></div></div>
   </div>
-  <div class="bg-[#FFFEFB] text-[#1A2B2B] rounded-[20px] p-6">
-    <p class="font-semibold text-[14px]">Book Your Consultation</p>
-    <p class="text-[12px] opacity-60 mt-1">Reply within 2 hours • Open 24 Hours</p>
-    <form onsubmit="event.preventDefault(); window.open('https://wa.me/919898700084?text=Hi%20Maple%20Dental,%20I%20want%20to%20book%20consultation%20at%20Thaltej','_blank')" class="mt-5 space-y-3">
-      <input required placeholder="Your Name" class="w-full border border-[#EDE6DD] rounded-[10px] px-4 py-3 text-[13px] outline-none">
-      <input required placeholder="Phone Number" class="w-full border border-[#EDE6DD] rounded-[10px] px-4 py-3 text-[13px] outline-none">
-      <select class="w-full border border-[#EDE6DD] rounded-[10px] px-4 py-3 text-[13px] outline-none"><option>Smile Makeover</option><option>Dental Implants</option><option>Root Canal</option><option>Aligners / Braces</option><option>Pediatric Dentistry</option><option>Teeth Whitening / Scaling</option></select>
-      <button class="w-full bg-[#1A2B2B] text-white py-3.5 rounded-full text-[12px] font-medium tracking-widest">BOOK ON WHATSAPP →</button>
-    </form>
+  <div class="lg:col-span-5 space-y-4"><h2 class="cond text-[22px] font-black">4.9★ 212+ GOOGLE — REAL BIRMINGHAM DRIVERS</h2>
+    <div class="steel bg-white p-5 rounded-[6px]"><div class="text-[#FFB800] text-[12px]"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="text-[13px] mt-3 leading-relaxed">"Car wouldn't start Coventry Road, Small Heath 6am. MK came 30 mins from Bordesley Green. Starter motor Transit — fitted on drive. Saved recovery fee."</p><p class="mono text-[10px] mt-3 font-bold">— IMRAN K. • SMALL HEATH B10 • TRANSIT NON-START</p></div>
+    <div class="steel bg-[#0F172A] text-white p-5 rounded-[6px]"><p class="text-[13px] leading-relaxed">"MOT failed coil spring + pads — Erdington. Did both fronts + pads & discs at workplace car park. Watched all done, stamped book."</p><p class="mono text-[10px] mt-3 text-[#FFB800]">— SARAH L. • ERDINGTON B24 • MOT FAILURE</p></div>
+    <div class="steel bg-white p-5 rounded-[6px]"><p class="text-[13px] leading-relaxed">"BMW 3 Series ECU light Digbeth. Dealer wanted £120 diag. MK scanned driveway, EGR fault cleared, live data shown. £45 sorted."</p><p class="mono text-[10px] mt-3 font-bold">— DAVID M. • DIGBETH B5 • BMW DIAGNOSTICS</p></div>
   </div>
 </section>
 
-<footer class="text-center py-8 text-[11px] tracking-widest opacity-40">© 2026 Maple Dental Multi-Speciality Clinic • Dr. Aditi Choksi & Dr. Dipti Choksi • Dentist in Thaltej, Ahmedabad • 5.0 (337)</footer>
+<footer class="bg-[#0F172A] text-white py-8 border-t-[6px] border-[#FFB800] px-6 md:px-10 mono text-[11px]"><div class="max-w-[1320px] mx-auto flex flex-col md:flex-row justify-between gap-4"><p>MK MOBILE MECHANIC BIRMINGHAM • Pretoria Rd B9 5LL • 07388 916260 • Fully Insured • Cash, Card & Bank Transfer • No Recovery Truck Needed</p><p class="opacity-60">Small Heath • Sparkbrook • Digbeth • Solihull • Erdington • Aston • Sutton Coldfield • Perry Barr</p></div></footer>
 
+<div class="fixed bottom-0 w-full z-50 bg-white border-t-[3px] border-black grid grid-cols-2 md:hidden"><a href="tel:07388916260" class="bg-black text-white cond font-black py-4 text-center">TAP TO CALL</a><a href="https://wa.me/447388916260" class="bg-[#FFB800] text-black cond font-black py-4 text-center border-l-[3px] border-black">WHATSAPP</a></div>
+<div class="h-[60px] md:hidden"></div>
+
+<script>
+// LENIS + GSAP + LIVE AREA ROTATOR + 3D
+const lenis=new Lenis({lerp:0.08}); function raf(t){lenis.raf(t); requestAnimationFrame(raf)} requestAnimationFrame(raf); gsap.ticker.add(t=>lenis.raf(t*1000));
+gsap.registerPlugin(ScrollTrigger);
+gsap.to("#progress",{width:"100%", scrollTrigger:{scrub:0.3}});
+
+// Live area rotator - amazing touch
+const areas=["SMALL HEATH B10 • 12 MIN ETA","SPARKBROOK B11 • 14 MIN ETA","DIGBETH B5 • 18 MIN ETA","ASTON B6 • 22 MIN ETA","ERDINGTON B24 • 28 MIN ETA","SOLIHULL B90 • 34 MIN ETA"];
+let ai=0; setInterval(()=>{ai=(ai+1)%areas.length; gsap.to("#liveArea",{opacity:0,y:-6,duration:0.2,onComplete:()=>{document.getElementById("liveArea").textContent=areas[ai]; gsap.to("#liveArea",{opacity:1,y:0,duration:0.3})}})},2500);
+
+// 3D POP ON SCROLL
+gsap.utils.toArray(".pop3d").forEach(el=>{
+  gsap.fromTo(el,{z:-200, y:60, opacity:0, rotateY:-12, rotateX:6},{z:0,y:0,opacity:1,rotateY:0,rotateX:0,duration:1.2,ease:"power4.out",scrollTrigger:{trigger:el,start:"top 85%",end:"top 30%",scrub:1}});
+});
+gsap.to("#h1a",{z:80, x:-20, scrollTrigger:{trigger:"#h1a",start:"top bottom",end:"bottom top",scrub:1}});
+gsap.to("#h1b",{z:120, x:20, scrollTrigger:{trigger:"#h1b",start:"top bottom",end:"bottom top",scrub:1.2}});
+gsap.to("#h1c",{z:60, x:-10, scrollTrigger:{trigger:"#h1c",start:"top bottom",end:"bottom top",scrub:1.1}});
+gsap.to("#h1d",{z:150, x:10, scrollTrigger:{trigger:"#h1d",start:"top bottom",end:"bottom top",scrub:1.3}});
+gsap.utils.toArray(".service3d").forEach((c,i)=>{gsap.fromTo(c,{z:-150-i*20,y:80,rotateY:-8},{z:0,y:0,rotateY:0,scrollTrigger:{trigger:c,start:"top 90%",end:"top 50%",scrub:1}})});
+
+// ESTIMATOR
+document.getElementById('estForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const vt=document.querySelector('input[name="vt"]:checked').value;
+  const reg=document.getElementById('eReg').value;
+  const post=document.getElementById('ePost').value;
+  const serv=document.getElementById('eServ').value;
+  const note=document.getElementById('eNote').value;
+  const msg=`*MK MOBILE MECHANIC BIRMINGHAM - 3D BLUEPRINT ESTIMATOR*%0A%0AVehicle: ${encodeURIComponent(vt)}%0AReg/Model: ${encodeURIComponent(reg)}%0APostcode: ${encodeURIComponent(post)}%0AService: ${encodeURIComponent(serv)}%0ANotes: ${encodeURIComponent(note)}%0A%0ABase Pretoria Rd B9 5LL - Need fixed price + ETA. Cash, Card & Bank Transfer OK.`;
+  window.open(`https://wa.me/447388916260?text=${msg}`,'_blank');
+});
+</script>
 </body>
 </html>
