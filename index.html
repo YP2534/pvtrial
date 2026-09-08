@@ -40,138 +40,182 @@
       color: inherit;
     }
 
-    /* Top Announcement Bar */
-    .top-bar {
-      background-color: var(--primary);
-      color: var(--white);
+    /* Top Strip (Replicating Screenshot Layout) */
+    .top-strip {
+      background-color: var(--bg-light);
+      border-bottom: 1px solid var(--border-color);
       font-size: 12px;
-      padding: 8px 16px;
+      color: var(--text-muted);
+    }
+    
+    .top-strip-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
+      height: 36px;
     }
 
-    .top-bar strong {
-      color: #ffd89b;
-    }
-
-    .top-bar-contact {
+    .top-links-left {
       display: flex;
-      gap: 16px;
+      gap: 20px;
+      height: 100%;
+    }
+
+    .top-links-left a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .top-links-left a.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+      font-weight: 600;
+    }
+
+    .top-links-right {
+      display: flex;
+      gap: 24px;
       align-items: center;
     }
 
-    /* Header */
+    .top-links-right a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .top-links-right a:hover, .top-links-left a:hover {
+      color: var(--primary);
+    }
+
+    /* Main Header */
     header {
-      border-bottom: 1px solid var(--border-color);
+      background: var(--white);
       position: sticky;
       top: 0;
-      background: var(--white);
       z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
     .header-main {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 16px 20px;
+      padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
-    }
-
-    .brand-logo {
-      display: flex;
-      flex-direction: column;
+      gap: 40px;
     }
 
     .brand-logo h1 {
       font-family: 'Cinzel', serif;
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 700;
-      color: var(--primary);
-      letter-spacing: 0.5px;
+      color: var(--text-dark);
+      letter-spacing: -0.5px;
       line-height: 1.1;
     }
 
-    .brand-logo span {
-      font-size: 11px;
-      color: var(--accent-gold);
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    .search-bar {
+    /* Search Bar styled like screenshot */
+    .search-container {
       flex: 1;
-      max-width: 480px;
-      display: flex;
+      max-width: 600px;
       position: relative;
     }
 
-    .search-bar input {
+    .search-container input {
       width: 100%;
-      padding: 10px 16px;
-      border: 1px solid var(--border-color);
-      border-radius: 4px 0 0 4px;
-      font-size: 13px;
+      padding: 12px 20px;
+      padding-right: 50px;
+      border: 1px solid #d1d1d1;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #333;
       outline: none;
+      background: var(--white);
+      transition: border 0.3s;
     }
 
-    .search-bar input:focus {
+    .search-container input:focus {
       border-color: var(--primary);
+      box-shadow: 0 0 0 1px var(--primary);
     }
 
-    .search-bar button {
-      background: var(--primary);
-      color: var(--white);
+    .search-container button {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
       border: none;
-      padding: 0 20px;
-      border-radius: 0 4px 4px 0;
-      font-size: 13px;
-      font-weight: 600;
+      font-size: 18px;
+      color: #888;
       cursor: pointer;
+      padding: 4px;
     }
 
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      font-size: 13px;
-    }
-
-    .action-btn {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-      font-weight: 600;
-      color: var(--text-dark);
-    }
-
-    .action-btn:hover {
+    .search-container button:hover {
       color: var(--primary);
     }
 
+    /* Action Icons (Stores, Profile, Wishlist, Cart) */
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .action-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      color: var(--text-muted);
+      position: relative;
+      transition: color 0.2s;
+    }
+
+    .action-item:hover {
+      color: var(--primary);
+    }
+
+    .action-item .icon {
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .action-item .label {
+      font-size: 11px;
+      font-weight: 500;
+    }
+
     .cart-badge {
+      position: absolute;
+      top: -6px;
+      right: -8px;
       background: var(--primary);
       color: var(--white);
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
       border-radius: 50%;
-      width: 20px;
-      height: 20px;
-      display: inline-flex;
+      width: 18px;
+      height: 18px;
+      display: flex;
       align-items: center;
       justify-content: center;
     }
 
     /* Category Nav */
     .category-nav {
-      background: var(--bg-light);
       border-top: 1px solid var(--border-color);
+      background: var(--white);
     }
 
     .nav-container {
@@ -179,21 +223,24 @@
       margin: 0 auto;
       padding: 0 20px;
       display: flex;
-      gap: 28px;
+      justify-content: space-between;
       overflow-x: auto;
       white-space: nowrap;
+      scrollbar-width: none; /* Firefox */
+    }
+    
+    .nav-container::-webkit-scrollbar {
+      display: none;
     }
 
     .nav-item {
-      padding: 12px 0;
+      padding: 14px 10px;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 500;
       color: #333333;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      border-bottom: 2px solid transparent;
       cursor: pointer;
       transition: all 0.2s;
+      border-bottom: 2px solid transparent;
     }
 
     .nav-item:hover, .nav-item.active {
@@ -599,7 +646,6 @@
       color: #ffffff;
     }
 
-    /* WhatsApp Button ONLY in Contact Us Section */
     .whatsapp-contact-card {
       background: #232323;
       border: 1px solid #383838;
@@ -655,8 +701,8 @@
       font-size: 12px;
     }
 
-    /* Cart Drawer */
-    .cart-drawer-backdrop {
+    /* Cart Drawer & Modals */
+    .cart-drawer-backdrop, .checkout-modal-backdrop {
       position: fixed;
       top: 0;
       left: 0;
@@ -669,7 +715,15 @@
       transition: all 0.3s ease;
     }
 
-    .cart-drawer-backdrop.active {
+    .checkout-modal-backdrop {
+      z-index: 1050;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .cart-drawer-backdrop.active, .checkout-modal-backdrop.active {
       opacity: 1;
       visibility: visible;
     }
@@ -693,7 +747,7 @@
       right: 0;
     }
 
-    .cart-header {
+    .cart-header, .modal-header {
       padding: 16px 20px;
       border-bottom: 1px solid var(--border-color);
       display: flex;
@@ -701,7 +755,7 @@
       align-items: center;
     }
 
-    .cart-header h3 {
+    .cart-header h3, .modal-header h3 {
       font-family: 'Cinzel', serif;
       font-size: 18px;
       color: var(--primary);
@@ -768,7 +822,7 @@
       margin-bottom: 14px;
     }
 
-    .btn-checkout {
+    .btn-checkout, .btn-place-order {
       width: 100%;
       background: var(--primary);
       color: var(--white);
@@ -782,31 +836,8 @@
       letter-spacing: 0.5px;
     }
 
-    .btn-checkout:hover {
+    .btn-checkout:hover, .btn-place-order:hover {
       background: var(--primary-dark);
-    }
-
-    /* Checkout Modal */
-    .checkout-modal-backdrop {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-      z-index: 1050;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .checkout-modal-backdrop.active {
-      opacity: 1;
-      visibility: visible;
     }
 
     .checkout-modal {
@@ -821,104 +852,25 @@
       position: relative;
     }
 
-    .modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 18px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .modal-header h3 {
-      font-family: 'Cinzel', serif;
-      font-size: 20px;
-      color: var(--primary);
-    }
-
-    .form-group {
-      margin-bottom: 14px;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 12px;
-      font-weight: 600;
-      color: #444;
-      margin-bottom: 4px;
-    }
-
+    .form-group { margin-bottom: 14px; }
+    .form-group label { display: block; font-size: 12px; font-weight: 600; color: #444; margin-bottom: 4px; }
     .form-group input, .form-group textarea, .form-group select {
-      width: 100%;
-      padding: 10px 12px;
-      border: 1px solid var(--border-color);
-      border-radius: 4px;
-      font-size: 13px;
-      outline: none;
-      font-family: inherit;
+      width: 100%; padding: 10px 12px; border: 1px solid var(--border-color);
+      border-radius: 4px; font-size: 13px; outline: none; font-family: inherit;
     }
-
-    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-      border-color: var(--primary);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--primary); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
     .order-summary-box {
-      background: var(--bg-light);
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      padding: 12px 16px;
-      margin-bottom: 16px;
-      font-size: 13px;
+      background: var(--bg-light); border: 1px solid var(--border-color);
+      border-radius: 6px; padding: 12px 16px; margin-bottom: 16px; font-size: 13px;
     }
 
-    .btn-place-order {
-      width: 100%;
-      background: var(--primary);
-      color: var(--white);
-      border: none;
-      padding: 14px;
-      font-size: 14px;
-      font-weight: 700;
-      border-radius: 4px;
-      cursor: pointer;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
+    .order-success { display: none; text-align: center; padding: 30px 10px; }
+    .order-success h4 { font-family: 'Cinzel', serif; font-size: 22px; color: #1b8a43; margin-bottom: 12px; }
+    .order-success p { color: #555; font-size: 14px; margin-bottom: 20px; line-height: 1.6; }
 
-    .btn-place-order:hover {
-      background: var(--primary-dark);
-    }
-
-    /* Success Confirmation Screen */
-    .order-success {
-      display: none;
-      text-align: center;
-      padding: 30px 10px;
-    }
-
-    .order-success h4 {
-      font-family: 'Cinzel', serif;
-      font-size: 22px;
-      color: #1b8a43;
-      margin-bottom: 12px;
-    }
-
-    .order-success p {
-      color: #555;
-      font-size: 14px;
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-
-    .mobile-bottom-bar {
-      display: none;
-    }
+    .mobile-bottom-bar { display: none; }
 
     /* ========================================================= */
     /* FLIPKART STYLE MOBILE VIEW ONLY (MAX-WIDTH: 768px)        */
@@ -927,6 +879,11 @@
       body {
         padding-bottom: 56px;
         background-color: #f1f2f4;
+      }
+
+      /* Hide Desktop Top Strip */
+      .top-strip {
+        display: none;
       }
 
       .mobile-bottom-bar {
@@ -964,7 +921,7 @@
       }
 
       .bottom-nav-btn span.icon {
-        font-size: 17px;
+        font-size: 18px;
         margin-bottom: 1px;
       }
 
@@ -975,7 +932,7 @@
       .mobile-cart-badge {
         position: absolute;
         top: 4px;
-        right: 28%;
+        right: 25%;
         background: var(--primary);
         color: #fff;
         font-size: 9px;
@@ -988,18 +945,6 @@
         justify-content: center;
       }
 
-      /* Top Announcement Bar */
-      .top-bar {
-        font-size: 10.5px;
-        padding: 5px 8px;
-        text-align: center;
-        justify-content: center;
-      }
-
-      .top-bar-contact {
-        display: none;
-      }
-
       /* Header: Responsive 2-Row Layout */
       header {
         background: #ffffff;
@@ -1007,71 +952,66 @@
       }
 
       .header-main {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 12px 8px;
-        gap: 8px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: 
+          "logo icons"
+          "search search";
+        padding: 10px 14px 10px;
+        gap: 12px;
       }
 
       .brand-logo {
-        order: 1;
+        grid-area: logo;
+        display: flex;
+        align-items: center;
       }
 
       .brand-logo h1 {
-        font-size: 18px;
-      }
-
-      .brand-logo span {
-        font-size: 9px;
+        font-size: 20px;
       }
 
       .header-actions {
-        order: 2;
-        gap: 14px;
+        grid-area: icons;
+        justify-content: flex-end;
+        gap: 16px;
+      }
+      
+      .header-actions .action-item {
+        display: none; /* Hide most on mobile, use bottom bar */
       }
 
-      .search-bar {
-        order: 3;
+      /* Only show cart and profile on mobile top header */
+      .header-actions .action-item.mobile-show {
+        display: flex;
+      }
+      .header-actions .action-item .label {
+        display: none;
+      }
+
+      .search-container {
+        grid-area: search;
         width: 100%;
         max-width: 100%;
       }
 
-      .search-bar input {
-        padding: 8px 12px;
-        font-size: 12px;
+      .search-container input {
+        padding: 10px 14px;
+        padding-right: 40px;
+        font-size: 13px;
         background: #f0f2f5;
-        border-color: #e0e0e0;
-      }
-
-      .search-bar button {
-        padding: 0 14px;
-        font-size: 12px;
+        border: 1px solid #e0e0e0;
       }
 
       /* Horizontal Scrollable Category Strip */
-      .category-nav {
-        background: #ffffff;
-        border-top: 1px solid #f0f0f0;
-        border-bottom: 1px solid #e0e0e0;
-      }
-
       .nav-container {
         padding: 0 10px;
-        gap: 14px;
-        scrollbar-width: none;
-      }
-
-      .nav-container::-webkit-scrollbar {
-        display: none;
+        gap: 8px;
       }
 
       .nav-item {
-        padding: 9px 2px;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.2px;
+        padding: 10px 4px;
+        font-size: 12px;
       }
 
       /* Hero Section: Compact */
@@ -1082,18 +1022,15 @@
       .hero-tagline {
         font-size: 10.5px;
         letter-spacing: 1px;
-        margin-bottom: 6px;
       }
 
       .hero-title {
         font-size: 22px;
-        line-height: 1.25;
         margin-bottom: 8px;
       }
 
       .hero-desc {
         font-size: 12.5px;
-        line-height: 1.45;
         margin-bottom: 16px;
       }
 
@@ -1106,28 +1043,20 @@
         width: 100%;
         padding: 10px;
         font-size: 12.5px;
-        text-align: center;
       }
 
-      /* Quick Category Pills: Horizontal Carousel */
+      /* Quick Category Pills */
       .quick-categories-wrap {
         background: #ffffff;
         padding: 12px 10px;
         margin: 8px 0;
         overflow-x: auto;
         scrollbar-width: none;
-        border-bottom: 1px solid #e0e0e0;
-      }
-
-      .quick-categories-wrap::-webkit-scrollbar {
-        display: none;
       }
 
       .quick-categories {
         display: flex;
         gap: 12px;
-        margin: 0;
-        padding: 0;
       }
 
       .category-card {
@@ -1143,33 +1072,21 @@
         width: 56px;
         height: 56px;
         margin-bottom: 4px;
-        border: 2px solid var(--accent-gold);
       }
 
       .category-card span {
         font-size: 10.5px;
-        font-weight: 600;
-        color: #222;
-        line-height: 1.2;
       }
 
-      /* Section Title */
       .section-title-wrap {
         background: #ffffff;
         margin: 6px 0 0;
         padding: 12px 10px;
-        border-bottom: 1px solid #eeeeee;
       }
 
-      .section-title {
-        font-size: 16px;
-      }
+      .section-title { font-size: 16px; }
+      .section-subtitle { font-size: 11px; }
 
-      .section-subtitle {
-        font-size: 11px;
-      }
-
-      /* 2-COLUMN FLIPKART STYLE PRODUCT GRID */
       .products-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 6px;
@@ -1179,148 +1096,55 @@
       }
 
       .product-card {
-        background: #ffffff;
-        border: 1px solid #e5e5e5;
         border-radius: 4px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.04);
       }
 
-      .badge {
-        top: 5px;
-        left: 5px;
-        font-size: 8px;
-        padding: 2px 4px;
-      }
+      .badge { font-size: 8px; padding: 2px 4px; top: 5px; left: 5px; }
+      .product-image { height: 145px; }
+      .product-info { padding: 8px; }
+      .product-rating { font-size: 10px; }
+      .rating-count { font-size: 9px; }
+      .product-title { font-size: 11.5px; height: 32px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin-bottom: 6px; }
+      .product-pricing { margin-bottom: 8px; gap: 4px; }
+      .current-price { font-size: 13.5px; }
+      .old-price { font-size: 10.5px; }
+      .discount-pill { font-size: 9.5px; }
+      .product-actions { grid-template-columns: 1fr; gap: 5px; }
+      .btn-add-cart, .btn-buy-now { padding: 6px 4px; font-size: 10.5px; border-radius: 3px; }
 
-      .product-image {
-        height: 145px;
-      }
+      .trust-bar { background: #ffffff; padding: 20px 10px; margin: 8px 0; }
+      .trust-container { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .trust-item h4 { font-size: 11.5px; }
+      .trust-item p { font-size: 10.5px; }
 
-      .product-info {
-        padding: 8px;
-      }
+      footer { padding: 30px 14px 16px; }
+      .footer-container { grid-template-columns: 1fr; gap: 22px; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
 
-      .product-rating {
-        font-size: 10px;
-        margin-bottom: 3px;
-      }
-
-      .rating-count {
-        font-size: 9px;
-      }
-
-      .product-title {
-        font-size: 11.5px;
-        line-height: 1.35;
-        height: 32px;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        margin-bottom: 6px;
-      }
-
-      .product-pricing {
-        margin-bottom: 8px;
-        gap: 4px;
-      }
-
-      .current-price {
-        font-size: 13.5px;
-      }
-
-      .old-price {
-        font-size: 10.5px;
-      }
-
-      .discount-pill {
-        font-size: 9.5px;
-      }
-
-      .product-actions {
-        grid-template-columns: 1fr;
-        gap: 5px;
-      }
-
-      .btn-add-cart, .btn-buy-now {
-        padding: 6px 4px;
-        font-size: 10.5px;
-        border-radius: 3px;
-      }
-
-      /* Trust Bar on Mobile: 2x2 Grid */
-      .trust-bar {
-        background: #ffffff;
-        padding: 20px 10px;
-        margin: 8px 0;
-      }
-
-      .trust-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-      }
-
-      .trust-item h4 {
-        font-size: 11.5px;
-      }
-
-      .trust-item p {
-        font-size: 10.5px;
-      }
-
-      /* Footer */
-      footer {
-        padding: 30px 14px 16px;
-      }
-
-      .footer-container {
-        grid-template-columns: 1fr;
-        gap: 22px;
-        margin-bottom: 20px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 8px;
-      }
-
-      /* Drawer and Modal on Mobile */
-      .cart-drawer {
-        max-width: 100%;
-        right: -100%;
-      }
-
-      .checkout-modal-backdrop {
-        padding: 0;
-        align-items: flex-end;
-      }
-
-      .checkout-modal {
-        max-width: 100%;
-        max-height: 94vh;
-        border-radius: 16px 16px 0 0;
-        padding: 20px 14px 28px;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-      }
+      .cart-drawer { max-width: 100%; right: -100%; }
+      .checkout-modal-backdrop { padding: 0; align-items: flex-end; }
+      .checkout-modal { max-width: 100%; max-height: 94vh; border-radius: 16px 16px 0 0; padding: 20px 14px 28px; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Announcement Bar (NO WHATSAPP) -->
-  <div class="top-bar">
-    <div>
-      <span>FESTIVE COMFORT SALE! EXTRA 10% OFF WITH COUPON: <strong>PUFFY10</strong> | FREE DOORSTEP DELIVERY ACROSS INDIA</span>
-    </div>
-    <div class="top-bar-contact">
-      <span>📞 1800-419-7833</span>
-      <span>📍 60+ Experience Stores Pan-India</span>
-      <span>⭐ 4.9★ Rated on Google (2,400+ Reviews)</span>
+  <!-- Top Strip - Desktop Only (Replicating Screenshot Layout) -->
+  <div class="top-strip">
+    <div class="top-strip-container">
+      <div class="top-links-left">
+        <a href="#" class="active">Furniture</a>
+        <a href="#">Home Interiors</a>
+        <a href="#">Bulk Order</a>
+      </div>
+      <div class="top-links-right">
+        <a href="tel:18004197833">📞 +91-1800-419-7833</a>
+        <a href="#">🏢 Become a Franchise</a>
+        <a href="#">🚚 Track Order</a>
+        <a href="#">❓ Help Center</a>
+      </div>
     </div>
   </div>
 
@@ -1328,21 +1152,31 @@
   <header>
     <div class="header-main">
       <div class="brand-logo">
-        <h1>COUCH PUFFY</h1>
-        <span>Cloud Sofas, Couches & Living • Pune</span>
+        <a href="/"><h1>Couch Puffy</h1></a>
       </div>
 
-      <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search cloud couches, recliners, L-shape sectionals, sofa beds..." />
-        <button onclick="handleSearch()">SEARCH</button>
+      <!-- Search Section Styled from Screenshot -->
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search Products, Color & More" />
+        <button onclick="handleSearch()">🔍</button>
       </div>
 
       <div class="header-actions">
-        <a href="#contactSection" class="action-btn">
-          <span>📍 Store Visit</span>
-        </a>
-        <div class="action-btn" onclick="toggleCart()">
-          <span>🛒 Cart</span>
+        <div class="action-item">
+          <span class="icon">🏪</span>
+          <span class="label">Stores</span>
+        </div>
+        <div class="action-item mobile-show">
+          <span class="icon">👤</span>
+          <span class="label">Profile</span>
+        </div>
+        <div class="action-item">
+          <span class="icon">🤍</span>
+          <span class="label">Wishlist(0)</span>
+        </div>
+        <div class="action-item mobile-show" onclick="toggleCart()">
+          <span class="icon">🛒</span>
+          <span class="label">Cart</span>
           <span class="cart-badge" id="cartCount">0</span>
         </div>
       </div>
@@ -1351,33 +1185,36 @@
     <!-- Category Nav -->
     <nav class="category-nav">
       <div class="nav-container">
-        <div class="nav-item active" onclick="filterCategory('all')">All Living</div>
-        <div class="nav-item" onclick="filterCategory('cloud')">Cloud 3-Seaters</div>
-        <div class="nav-item" onclick="filterCategory('sectional')">L-Shape Sectionals</div>
-        <div class="nav-item" onclick="filterCategory('recliner')">Motorised Recliners</div>
-        <div class="nav-item" onclick="filterCategory('sofabed')">Puffy Sofa Cum Beds</div>
-        <div class="nav-item" onclick="filterCategory('lounger')">Bouclé Lounge Chairs</div>
-        <div class="nav-item highlight" onclick="filterCategory('deals')">Deals Under ₹29,999</div>
+        <div class="nav-item active" onclick="filterCategory('all')">Sofas</div>
+        <div class="nav-item" onclick="filterCategory('cloud')">Living</div>
+        <div class="nav-item" onclick="filterCategory('sofabed')">Bedroom</div>
+        <div class="nav-item" onclick="filterCategory('cloud')">Mattress</div>
+        <div class="nav-item" onclick="filterCategory('lounger')">Dining</div>
+        <div class="nav-item" onclick="filterCategory('sectional')">Storage</div>
+        <div class="nav-item" onclick="filterCategory('recliner')">Study & Office</div>
+        <div class="nav-item" onclick="filterCategory('lounger')">Outdoor</div>
+        <div class="nav-item" onclick="filterCategory('all')">Decor & Furnishing</div>
+        <div class="nav-item" onclick="filterCategory('cloud')">Interiors</div>
+        <div class="nav-item highlight" onclick="filterCategory('deals')">New Arrivals</div>
       </div>
     </nav>
   </header>
 
   <!-- Sale Ticker -->
   <div class="sale-ticker">
-    ⚡ 10-YEAR STRUCTURAL WARRANTY • 100-NIGHT COMFORT TRIAL • FREE DOORSTEP ASSEMBLY ON ALL COUCHES ⚡
+    ⚡ FESTIVE REFRESH UPTO 60% OFF • 10-YEAR STRUCTURAL WARRANTY • FREE DOORSTEP ASSEMBLY ⚡
   </div>
 
   <!-- Hero Section -->
   <section class="hero-banner">
     <div class="hero-content">
-      <div class="hero-tagline">Engineered for Deep Cloud Comfort</div>
+      <div class="hero-tagline">The Festive Refresh</div>
       <h2 class="hero-title">Sink Into The World's Most Comfortable Couches</h2>
       <p class="hero-desc">
         Designed with high-density multi-layered cloud memory foam, stain-resistant Italian bouclé fabric, and kiln-dried solid hardwood frames.
       </p>
       <div class="hero-buttons">
         <a href="#productsSection" class="btn btn-primary">EXPLORE SOFA COLLECTION</a>
-        <a href="#contactSection" class="btn btn-outline">VISIT SHOWROOM</a>
       </div>
     </div>
   </section>
@@ -1418,7 +1255,7 @@
     </div>
 
     <div class="products-grid" id="productGrid">
-      <!-- Injected via JavaScript (Add to Cart & Buy Now ONLY - NO WHATSAPP) -->
+      <!-- Injected via JavaScript -->
     </div>
   </section>
 
@@ -1444,15 +1281,13 @@
     </div>
   </section>
 
-  <!-- Footer with Contact Us Section (WHATSAPP ONLY HERE) -->
+  <!-- Footer -->
   <footer id="contactSection">
     <div class="footer-container">
       <div class="footer-col">
         <h5>COUCH PUFFY LIVING</h5>
-        <p>
-          Couch Puffy is India's leading destination for high-density cloud memory foam sofas, modular deep-seating sectionals, motorised recliners, and modern home furnishings designed for lasting everyday comfort.
-        </p>
-        <p><strong>Flagship Showroom:</strong> Couch Puffy Studio, Baner Road / MG Road Hub, Pune, Maharashtra 411001</p>
+        <p>Couch Puffy is India's leading destination for high-density cloud memory foam sofas, modular deep-seating sectionals, motorised recliners, and modern home furnishings.</p>
+        <p><strong>Flagship Showroom:</strong> Couch Puffy Studio, Baner Road, Pune</p>
         <p><strong>Support Phone:</strong> 1800-419-7833 | care@couchpuffy.com</p>
       </div>
 
@@ -1473,20 +1308,17 @@
           <li><a href="javascript:void(0)">100-Night Trial Guidelines</a></li>
           <li><a href="javascript:void(0)">10-Year Warranty Terms</a></li>
           <li><a href="javascript:void(0)">Delivery & Assembly FAQs</a></li>
-          <li><a href="javascript:void(0)">Custom Fabric Swatch Kit</a></li>
           <li><a href="javascript:void(0)">Track Order Status</a></li>
         </ul>
       </div>
 
-      <!-- Contact Us Card: WHATSAPP IS ONLY ALLOWED HERE -->
       <div class="footer-col">
         <h5>CONTACT US</h5>
-        <p>Need custom sofa dimensions, fabric samples, or bulk living room quotes?</p>
-        
+        <p>Need custom sofa dimensions or fabric samples?</p>
         <div class="whatsapp-contact-card">
           <h6>Chat Directly With Furniture Expert</h6>
           <p>Get fabric consultation, room dimension advice & order assistance.</p>
-          <a href="https://wa.me/919822318015?text=Hello%20Couch%20Puffy,%20I%20have%20an%20inquiry%20regarding%20your%20cloud%20couch%20collection." target="_blank" class="btn-contact-whatsapp">
+          <a href="https://wa.me/919822318015" target="_blank" class="btn-contact-whatsapp">
             <span>💬 Chat on WhatsApp Support</span>
           </a>
         </div>
@@ -1495,18 +1327,18 @@
 
     <div class="footer-bottom">
       <div>© 2026 Couch Puffy Furnishings India Pvt. Ltd. All Rights Reserved.</div>
-      <div>Payment Partners: UPI • RuPay • Visa • Mastercard • Net Banking • No-Cost EMI Available</div>
+      <div>Payment Partners: UPI • RuPay • Visa • Mastercard • Net Banking</div>
     </div>
   </footer>
 
-  <!-- Sticky Mobile Navigation Bar (Flipkart Style App Navigation) -->
+  <!-- Sticky Mobile Navigation Bar -->
   <div class="mobile-bottom-bar">
     <div class="mobile-bottom-nav">
       <div class="bottom-nav-btn active" onclick="window.scrollTo({top:0, behavior:'smooth'})">
         <span class="icon">🏠</span>
         <span>Home</span>
       </div>
-      <div class="bottom-nav-btn" onclick="document.getElementById('searchInput').focus(); window.scrollTo({top:70, behavior:'smooth'})">
+      <div class="bottom-nav-btn" onclick="document.getElementById('searchInput').focus(); window.scrollTo({top:0, behavior:'smooth'})">
         <span class="icon">🔍</span>
         <span>Search</span>
       </div>
@@ -1522,7 +1354,7 @@
     </div>
   </div>
 
-  <!-- Slide-out Shopping Cart (NO WHATSAPP) -->
+  <!-- Slide-out Shopping Cart -->
   <div class="cart-drawer-backdrop" id="cartBackdrop" onclick="toggleCart()"></div>
   <div class="cart-drawer" id="cartDrawer">
     <div class="cart-header">
@@ -1542,7 +1374,7 @@
     </div>
   </div>
 
-  <!-- Checkout Modal (NO WHATSAPP) -->
+  <!-- Checkout Modal -->
   <div class="checkout-modal-backdrop" id="checkoutModalBackdrop">
     <div class="checkout-modal">
       <div class="modal-header">
@@ -1620,116 +1452,25 @@
   </div>
 
   <script>
-    // Product Catalog for Couch Puffy
     const products = [
-      {
-        id: 1,
-        name: "Celeste Ultra-Puffy 3-Seater Cloud Couch in Soft Ivory Bouclé Fabric",
-        category: "cloud",
-        price: 34999,
-        originalPrice: 69999,
-        discount: "50% OFF",
-        rating: 5,
-        reviews: 142,
-        badge: "BESTSELLER",
-        image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80"
-      },
-      {
-        id: 2,
-        name: "Haven Modular L-Shape Sectional Cloud Sofa with Reversible Chaise (Sand Beige)",
-        category: "sectional",
-        price: 49999,
-        originalPrice: 94999,
-        discount: "47% OFF",
-        rating: 5,
-        reviews: 98,
-        badge: "EXCLUSIVE",
-        image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=600&q=80"
-      },
-      {
-        id: 3,
-        name: "Aero Motorised Zero-Gravity Single Seater Recliner in Tan Leatherette",
-        category: "recliner",
-        price: 26999,
-        originalPrice: 48999,
-        discount: "45% OFF",
-        rating: 5,
-        reviews: 86,
-        badge: "POPULAR",
-        image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80"
-      },
-      {
-        id: 4,
-        name: "Sienna Hydraulic Puffy 3-Seater Sofa Cum Bed with Under-Storage (Emerald Velvet)",
-        category: "sofabed",
-        price: 28999,
-        originalPrice: 54999,
-        discount: "47% OFF",
-        rating: 5,
-        reviews: 116,
-        badge: "UNDER ₹29,999",
-        image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80"
-      },
-      {
-        id: 5,
-        name: "Nuvola Curved Designer Accent Chair in Puffy Teddy Bouclé (Charcoal Grey)",
-        category: "lounger",
-        price: 13999,
-        originalPrice: 26999,
-        discount: "48% OFF",
-        rating: 5,
-        reviews: 64,
-        badge: "DEAL",
-        image: "https://images.unsplash.com/photo-1580481077195-c22822b7f9ab?auto=format&fit=crop&w=600&q=80"
-      },
-      {
-        id: 6,
-        name: "Komorebi Minimalist Low-Profile 3-Seater Puffy Couch (Mist Grey Cotton Linen)",
-        category: "cloud",
-        price: 29999,
-        originalPrice: 59999,
-        discount: "50% OFF",
-        rating: 5,
-        reviews: 73,
-        badge: "EXCLUSIVE",
-        image: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=600&q=80"
-      },
-      {
-        id: 7,
-        name: "Grandioso Extra-Deep 6-Seater U-Shape Sectional Family Sofa (Mocha Brown)",
-        category: "sectional",
-        price: 74999,
-        originalPrice: 139999,
-        discount: "46% OFF",
-        rating: 5,
-        reviews: 52,
-        badge: "LUXURY",
-        image: "https://images.unsplash.com/photo-1512290900672-1f4864e43f5a?auto=format&fit=crop&w=600&q=80"
-      },
-      {
-        id: 8,
-        name: "Sereno Dual Motor Power Recliner 2-Seater Home Theatre Loveseat (Cognac Tan)",
-        category: "recliner",
-        price: 52999,
-        originalPrice: 96999,
-        discount: "45% OFF",
-        rating: 5,
-        reviews: 41,
-        badge: "EXCLUSIVE",
-        image: "https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=600&q=80"
-      }
+      { id: 1, name: "Celeste Ultra-Puffy 3-Seater Cloud Couch in Soft Ivory Bouclé Fabric", category: "cloud", price: 34999, originalPrice: 69999, discount: "50% OFF", rating: 5, reviews: 142, badge: "BESTSELLER", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80" },
+      { id: 2, name: "Haven Modular L-Shape Sectional Cloud Sofa with Reversible Chaise (Sand Beige)", category: "sectional", price: 49999, originalPrice: 94999, discount: "47% OFF", rating: 5, reviews: 98, badge: "EXCLUSIVE", image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=600&q=80" },
+      { id: 3, name: "Aero Motorised Zero-Gravity Single Seater Recliner in Tan Leatherette", category: "recliner", price: 26999, originalPrice: 48999, discount: "45% OFF", rating: 5, reviews: 86, badge: "POPULAR", image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80" },
+      { id: 4, name: "Sienna Hydraulic Puffy 3-Seater Sofa Cum Bed with Under-Storage (Emerald Velvet)", category: "sofabed", price: 28999, originalPrice: 54999, discount: "47% OFF", rating: 5, reviews: 116, badge: "UNDER ₹29,999", image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" },
+      { id: 5, name: "Nuvola Curved Designer Accent Chair in Puffy Teddy Bouclé (Charcoal Grey)", category: "lounger", price: 13999, originalPrice: 26999, discount: "48% OFF", rating: 5, reviews: 64, badge: "DEAL", image: "https://images.unsplash.com/photo-1580481077195-c22822b7f9ab?auto=format&fit=crop&w=600&q=80" },
+      { id: 6, name: "Komorebi Minimalist Low-Profile 3-Seater Puffy Couch (Mist Grey Cotton Linen)", category: "cloud", price: 29999, originalPrice: 59999, discount: "50% OFF", rating: 5, reviews: 73, badge: "EXCLUSIVE", image: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=600&q=80" },
+      { id: 7, name: "Grandioso Extra-Deep 6-Seater U-Shape Sectional Family Sofa (Mocha Brown)", category: "sectional", price: 74999, originalPrice: 139999, discount: "46% OFF", rating: 5, reviews: 52, badge: "LUXURY", image: "https://images.unsplash.com/photo-1512290900672-1f4864e43f5a?auto=format&fit=crop&w=600&q=80" },
+      { id: 8, name: "Sereno Dual Motor Power Recliner 2-Seater Home Theatre Loveseat (Cognac Tan)", category: "recliner", price: 52999, originalPrice: 96999, discount: "45% OFF", rating: 5, reviews: 41, badge: "EXCLUSIVE", image: "https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=600&q=80" }
     ];
 
     let cart = [];
 
-    // Render Product Cards (NO WHATSAPP: "Add to Cart" and "Buy Now" ONLY)
     function renderProducts(items) {
       const grid = document.getElementById("productGrid");
       if (items.length === 0) {
         grid.innerHTML = '<p style="grid-column: 1/-1; text-align:center; padding:40px; color:#888;">No sofas found in this category.</p>';
         return;
       }
-
       grid.innerHTML = items.map(p => `
         <div class="product-card">
           <span class="badge ${p.badge === 'EXCLUSIVE' || p.badge === 'LUXURY' ? 'badge-exclusive' : 'badge-sale'}">${p.badge}</span>
@@ -1737,9 +1478,7 @@
             <img src="${p.image}" alt="${p.name}" loading="lazy" />
           </div>
           <div class="product-info">
-            <div class="product-rating">
-              ★★★★★ <span class="rating-count">(${p.reviews} reviews)</span>
-            </div>
+            <div class="product-rating">★★★★★ <span class="rating-count">(${p.reviews} reviews)</span></div>
             <h4 class="product-title">${p.name}</h4>
             <div class="product-pricing">
               <span class="current-price">Rs. ${p.price.toLocaleString('en-IN')}.00</span>
@@ -1755,31 +1494,20 @@
       `).join("");
     }
 
-    // Category Filtering
     function filterCategory(cat) {
       document.querySelectorAll(".nav-item").forEach(el => el.classList.remove("active"));
       event?.target?.classList?.add("active");
-
-      if (cat === "all") {
-        renderProducts(products);
-      } else if (cat === "deals") {
-        renderProducts(products.filter(p => p.price <= 29999));
-      } else {
-        renderProducts(products.filter(p => p.category === cat));
-      }
+      if (cat === "all") renderProducts(products);
+      else if (cat === "deals") renderProducts(products.filter(p => p.price <= 29999));
+      else renderProducts(products.filter(p => p.category === cat));
     }
 
-    // Search Logic
     function handleSearch() {
       const query = document.getElementById("searchInput").value.toLowerCase().trim();
-      const filtered = products.filter(p => 
-        p.name.toLowerCase().includes(query) || 
-        p.category.toLowerCase().includes(query)
-      );
+      const filtered = products.filter(p => p.name.toLowerCase().includes(query) || p.category.toLowerCase().includes(query));
       renderProducts(filtered);
     }
 
-    // Cart Drawer Controls
     function toggleCart() {
       document.getElementById("cartBackdrop").classList.toggle("active");
       document.getElementById("cartDrawer").classList.toggle("active");
@@ -1788,11 +1516,8 @@
     function addToCart(productId) {
       const item = products.find(p => p.id === productId);
       const existing = cart.find(c => c.id === productId);
-      if (existing) {
-        existing.quantity += 1;
-      } else {
-        cart.push({ ...item, quantity: 1 });
-      }
+      if (existing) existing.quantity += 1;
+      else cart.push({ ...item, quantity: 1 });
       updateCartUI();
       toggleCart();
     }
@@ -1800,11 +1525,8 @@
     function buyNow(productId) {
       const item = products.find(p => p.id === productId);
       const existing = cart.find(c => c.id === productId);
-      if (existing) {
-        existing.quantity += 1;
-      } else {
-        cart.push({ ...item, quantity: 1 });
-      }
+      if (existing) existing.quantity += 1;
+      else cart.push({ ...item, quantity: 1 });
       updateCartUI();
       openCheckoutModal();
     }
@@ -1814,8 +1536,8 @@
       const mobileCountEl = document.getElementById("mobileCartCount");
       const listEl = document.getElementById("cartItemsList");
       const totalEl = document.getElementById("cartSubtotal");
-
       const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      
       countEl.innerText = totalItems;
       if (mobileCountEl) mobileCountEl.innerText = totalItems;
 
@@ -1848,15 +1570,10 @@
       updateCartUI();
     }
 
-    // Checkout Modal Handlers
     function openCheckoutModal() {
-      if (cart.length === 0) {
-        alert("Your cart is empty. Please add a couch first.");
-        return;
-      }
+      if (cart.length === 0) return alert("Your cart is empty. Please add a couch first.");
       document.getElementById("cartBackdrop").classList.remove("active");
       document.getElementById("cartDrawer").classList.remove("active");
-
       const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
       document.getElementById("modalTotalAmount").innerText = "Rs. " + subtotal.toLocaleString('en-IN') + ".00";
       document.getElementById("checkoutFormContainer").style.display = "block";
@@ -1888,8 +1605,6 @@
         A confirmation invoice and delivery tracking details will be sent to <strong>${email}</strong> and SMS confirmation to <strong>${phone}</strong>.<br>
         Delivery Address: ${address}, ${city} - ${pincode}.
       `;
-
-      // Clear cart
       cart = [];
       updateCartUI();
     }
@@ -1899,7 +1614,6 @@
       document.getElementById("orderForm").reset();
     }
 
-    // Initial Load
     document.addEventListener("DOMContentLoaded", () => {
       renderProducts(products);
       document.getElementById("searchInput").addEventListener("keypress", (e) => {
